@@ -1,0 +1,32 @@
+---
+title: "Acct 682 Research Ideas 1"
+author: "David Zynda"
+date: "January 18, 2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Idea 1
+_____________________________________________________
+
+On page 124 of Kothari 2001, he discusses promising areas for future research in regards to predicting earnings response coefficient magnitudes. In particular, he talks aboiut how rigorous theories for time-series properties of this topic do not exist. Furthermore, he cites one area of promising research is to link earnings response coefficient literature (using time series) to economic determinants "like competition, technology, innovation, effectiveness of corporate governance, etc". 
+
+Many of these variables would appear to me to be rather endogenous. Perhaps it is out of fashion these days, but I think some exploration between earnings coefficients and economic determinants could be had with a multivariate time series model, such as a vector autoregressive process or, if needed (provided that these processes are cointegrated), a vector error correction model. 
+
+Using such a model, one could see how significant present and lagged variables are for earnings, and earnings for others being tested. One variable, of course, would be the earnings response. I would need to immerse myself more in the literature to find out what may be relevant for testing as well. If nothing, perhaps univariate is good enough. However, to truly test the economic determinants, like innovation, one could specify an exogenous "shock" variable representing one of these economic determinants. Then, I would use dynamic multiplier analysis to measure the impact of this shock to the earnings. Such method would allow one to measure the effect of something like innovation. In the case that a variable maybe endogenous, one could still measure the shock through impulse response. Careful consideration is still needed to design the model, however. Yet, I believe that these multivariate time series models can be quite good in exploring the relationships between these variables. 
+
+
+
+
+## Idea 2
+
+
+
+
+
+
+
+
