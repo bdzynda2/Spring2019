@@ -1,0 +1,157 @@
+---
+title: 'Using Daily Stock Returns: Case of Event Studies'
+author: "Brown and Warner"
+date: "JFE 1985"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Section 1: Research Question 
+
+_How can we adapt the event study formerly using monthly stock returns for daily stock returns? Is the Event Study, in particular using OLS estimation, robust to unkept daily data?_
+
+
+# Secion 2: Motivation and Background
+
+
+
+Previously, Brown and Warner (1980) examined properties and methodologies of event studies employing monthly stock data. However, the authors now turn their attention to daily data, which, they note, could merit different methods from that of monthly data. 
+
+ (1) Daily stock returns depart from normality assumptions. Monthly stock returns seem to be at least approximately normally distributed with mean $\mu$ and standard deviation $\sigma^2$. _Q: why do we care?_
+ 
+ (2) Daily data is non-synchronous. From Scholes Williams 1976:
+ 
+  > "Many securities listed on organized exchanges are traded only infrequently, with few securities so actively traded that prices are recorded almost continuously. Because prices... are reported only at distinct random invervals, completely accurate calculation of returns over any fixed sequence of periods is virtually impossible. [With non-synchronous data] variances and covariances of reported returns differ from corresponding variances and covariances of true returns. Reported returns on single securities appear serially correlated and leptokurtic relative to actual returns. OLS Estimators of both alphas and betas for almost all securities are biased and incosistent"[^1]
+ 
+ 
+ 
+ (3) Variance Estimation - Because the data are non-synchronous, the returns may be dependent on past observations. If so, the variance is not as easy to estimate and may be biased. Cross-sectional dependence of returns, e.g., two securites depend on one another in time $t$, also affect variance. Lastly, variance may not be stationary. The variance of stock returns can widen around annoucement times. 
+ 
+ 
+ \pagebreak
+ 
+# Section 3: Data 
+
++ Go to CRSP and look at all securities with daily data and at least 30 daily returns. Randomly select 50. 
++ For each of the 50 securities, randomly select an event day with equal probability of selection from all days from July 2, 1962 to December 31, 1979. 
++ Repeat 250 times to get 250 samples, allowing for each security to be randomly selected again (i.e. with replacement)
++ Let event day be $0$ and include with it 244 days before $0$ and 5 days after $0$. 
++ Estimation period will be days -244 through -6, and event period -5 through 5. 
+
+
+# Section 4.1: Research Design - A Look at Normality
+
+
+__Three Excess Return Measures__
+
+Mean Adjusted Returns:
+
+$$A_{i,t} = R_{i,t} - \bar{R}_i$$
+
+$$\bar{R}_i = \frac{1}{239} \sum^{-6}_{t=-244} R_{i,t}$$
+Notice $\bar{R}_i$ measures security $i$'s daily return over the _estimation_ period. 
+
+Market Adjusted Returns:
+
+$$A_{i,t} = R_{i,t} - R_{m,t}$$
+
+OLS Market Model:
+
+$$A_{i,t} = R_{i,t} - \hat{\alpha}_i - \hat{\beta}_i R_{m,t}$$
+
+
+
+__Test Statistic under the Null Hypothesis__
+
+Recall:
+
+_$H_0$: the mean day "0" excess return (the simple average of market model excess returns) is equal to zero_
+
+The test statistic, in words (equation 5 on page 7, derived from equations 6,7, and 8) is the average excess return at time $t$ (where $t=0$) across all firms divided by its standard deviation. Since this is portfolio excess returns, we need not worry about cross-sectional dependencies. It is assumed, however, that there is no time-series autocorrelations. 
+
+In order to simulate effect of abnormal return, a constant the size of the desired return is added to each security at $t=0$. 
+
+
+__Model Setup__
+
+(1) Time Series with three different return measures with all 12,500 stocks.
+(2) Take on snap shot of time series at $t=0$, complete cross-sectional analysis at event day with observation being 250 samples of 50 security averages. 
+
+__Method__
+
+First, authors look at normality of returns in time series as well as normality in cross-section (at $t=0$). In so doing, they employ, in addition to the regular mean and variance, skewness, kurtosis, and Studentized range. Skewness is the third central moment of distribution and speaks of assymmetry of the distribution. Skewness is numerically evident when the mean is "far" from the median. Kurtosis is the fourth central moment and gives the characteristic "fat tails" or "peakedness" though some have disputed such description[^2]. Most importantly, a high level of skewness leads to the possibility of observing more extreme outliers. "The studentized range distribution is the probability distribution of studentized ranges for independent, identically distributed random variables that are normally distributed. It is primarily used in post hoc tests, like Tukey's HSD to limit the Type I error risk."[^3]
+
+_Panel A_ of _Table 1_ shows _daily_ performance measures of individual stocks. This is the time series data for each individual security. Equal-weighting is used. We see that the mean is centered around 0 as we would hope, but each model exhibits significant skewness, kurtosis, and exceeds critical value of studentized range. The time series do not appear to meet normality assumptions. Our only hope is the standard deviation, which appears consistent. Hence:
+
+>"These results suggest that the alternative measures of excess returns will exhibit similar ability to detect abnormal performance when it is present"(10).
+
+_Panel B_ shows that normality improves with sample size - a promise delivered by the Central Limit Theorem.
+
+# Section 4.2: Major Results
+
+_Figure 1_ shows that, under no abnormal returns, the test statistic using market model appears to follow the cumulative normal distribution - this indicates that these data may be close to normal. _Table 2_ confirms these results, but with some presence of skewness and kurtosis remaining. 
+
+__Recall__: The power of a binary hypothesis test is the probability that the test rejects the null hypothesis ($H_0$) when a specific alternative hypothesis ($H_A$) is true. The statistical power ranges from 0 to 1, and as statistical power increases, the probability of making a type II error (wrongly failing to reject the null) decreases. 
+
+So, the goal is to see the power of detecting abnormal returns, assuming a null hypothesis under unit normality of the tests statistics. Table 3 shows that, no matter the return formulation used, the power is consistently the same and quite impressive for the case $0.02$. 
+
+
+Skewness and kurtosis worsen with a decrease in sample size. Lengthening the event periods decrease power (_Table 4_). In the same spirit of lengthening event periods, we see effect of clustering where power is decreased more, and a curious result oof increased power is seen in the mean adjusted returns with no abnormal return- symptomatic of autocorrelation. 
+
+# Section 5: Research Design and Results for Non-synchronous Trading 
+
+Previously, all tests were done without accounting for non-synchronous data. Yet, it did not affect the overall event study methodology, and theoretically should not given the setup. 
+
+However, if you desire estimates of excess returns, your estimates will be biased. So, we turn to specification and power of Scholes-Williams and Dimson based procedures. I claim it is less important to know the theoretical underpinnings of these methods, but it is necessary to know that they account for autocorrelation. 
+
+
+_Table 6_ reveals that there is no large gain when one makes a correction to non-synchronous trading. _Question: Why are rejection frequencies higher for NYSE?_
+
+
+
+_Table 7_ shows that autocorrelation coefficients are small but significant. Hence some adjustments may be warranted, though benefits are quite limited - helped lower the power of a test with a true null. 
+
+
+
+_Table 8_ deals with cross-sectional dependence. Although such dependence should be taken seriously, for event studies it is most important to correct when there is clustering, otherwise, a correction could severly weaken the power of the test. However, there are exceptions in this data (clustered, 0 mean abnormal return) as well as industry specific data. 
+
+
+# Section 6: Some thoughts on Variance
+
+
++ Increases of variance of return increase for days around "some types of events"
++ For time-series, this can increase rejection of a true null
++ Effects less pronounced with cross-sectional returns, unless variance increases differ across securities
++ Adverse effects could be eliminated by partitioning sample
+
+
+
+
+# Section 7: Review and Further Quesions
+
+
+"Methodologies based on the OLS market model and using standard parametric tests are well-specified under a variety of conditions"(25).
+
++ Non-normality does not really affect event studies
++ No clear cut benefit from acccounting for non-synchronous data for event studies
++ Further research still needed to work out kinks of variance issues
+
+
+__Questions__
+
+(1) We now live in a world of not only daily data, but intra-day data. What statistical considerations ought we to make when analyzing intra-day TAQ data that may be different from daily or monthly data? Is OLS still the workhorse?
+
+(2) In what ways could we predict out of sample and forecast for future similar events given sizeable results in an event study?
+
+(3) What if our sample is "small" or we desired to constrain a sample to a particular feature for a "controlled" test. How might we adapt these ideas?
+
+
+[^1]: Myron Scholes and Joseph Williams, "Estimating Betas from Nonsynchronous Data", _Journal of Financial Economics_, 1977, 1-2. 
+  
+[^2]: https://en.wikipedia.org/wiki/Kurtosis
+[^3]: https://www.statisticshowto.datasciencecentral.com/studentized-range-distribution/
+
+
