@@ -1,0 +1,18 @@
+---
+title: "Research Idea 2"
+author: "David Zynda"
+date: "January 25, 2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## (1) Bandwagon Debt
+
+Recently, it was reported by NPR that different streaming services and telecom (AT&T with $190 Billion) companies are taking out massive levels of debt to compete with Netflix online streaming services. Even Netflix is taking on a lot of debt financing to fuel investment. Formerly, low interest rates made it attactive to do so. However, are others doing it because the leader Netflix is doing it? Is it a bandwagon phenomenon, or simply just capatilizing on cheap debt. Furthermore, how much debt is it? Would there have been no good alternatives? Do market leaders command other firms to do risky things as a result of their investment?
+
+## (2) ADRs
+
+American Depository Receipts appear to be in decline, with a substantial drop in data on CRSP. Why aren't foreign firms listing ADRs on American exchanges? Is it political considertaions, or has modern technology with fast computers rendered the ADR not as useful?

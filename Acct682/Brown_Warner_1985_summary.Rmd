@@ -149,6 +149,14 @@ __Questions__
 (3) What if our sample is "small" or we desired to constrain a sample to a particular feature for a "controlled" test. How might we adapt these ideas?
 
 
+
+\pagebreak
+
+
+
+![Table 2 from paper](682_markdown_pics/kothari_warner_04_1.PNG)
+
+
 [^1]: Myron Scholes and Joseph Williams, "Estimating Betas from Nonsynchronous Data", _Journal of Financial Economics_, 1977, 1-2. 
   
 [^2]: https://en.wikipedia.org/wiki/Kurtosis
