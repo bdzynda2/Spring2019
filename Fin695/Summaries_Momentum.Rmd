@@ -1,0 +1,79 @@
+---
+title: "Momentum and Reversal Summaries"
+author: "David Zynda"
+date: "January 26, 2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# (1) Danie & Moskowitz, "Momentum Crashes", JFE 2016
+
+## Research Question and Design
+
+_Momentum strategies are prone to crashes. Can investors predict momentum crashes?_
+
+Using data from CRSP, they sort firms into decile based on cumulative returns over the last year, excluding one month at $t-1$. This way, they can identifying "winners" and "losers" to long and short, respectively, as they assemble portfolios. Then, they use four different regressions of the return on winners minus losers on market return, and some other instruments depending on the setup to account for bear markets and upside and downside betas. This way, they can compare the returns and betas to see how deciles are affected in both bear markets and bull markets (with a different indicator). Regressions are also done for the same winner minus loser return on bear market indicator and variance of daily returns over the market. There is significance across the board for these volatility indicators. To account for the volatility in such portfolios, they creates weights based on the in-sample Sharpe ratio scaled by a time invariant constant that controls the uncondtiional risk and reurn of the dynamic portfolio. This strategy using the weights outperforms the regular momenetum portfolio both in-sample and out-of-sample. Additionally, testing on other asset classes and markets reaffirm the results. 
+
+## Contribution
+
+This paper contributes to former research addressing the time-varying nature of betas (Kothari and Shanken 1992). Additionally, it builds on work by Grundy and Martin 2001 that momentum porfolios suffer in bear markets. However, Grundy and Martin use forward-looking betas which bias results and cannot be implemented practically. Daniel and Moskowitz instead use up and down market betas. They uniquely apply analysis relating to options to momentum portfolios. They also uniquely design a dynamic strategy for momentum portfolios. 
+
+## Results
+
+Momentum crashes cheifly occur during periods of market stress, such as a bear market. Consequently, volatility measures such as the VIX can help forecast momentum crashes. Such result arises from the time-varying nature of the betas in the portfolio. Momentum portfolios long past winners with high beta stocks and short past losers with low beta stocks. In times of market stress, the betas of the past losers increase drastically, and betas of the past winners decrease. Because the portfolios short the past losers which, after the crash, have a larger beta than their long positions, the whole momentum strategy crashes. In particular, up-market beta is significantly greater, thereby hurting the momentum strategy even more as the market recovers. Then, such strategy can be characterized as a written call option. As the market goes down it is "out of the money". But the portfolio suffers once the strike price threshold is crossed - that is the market recovers. Since the momentum strategy is like a written call option, time-varying risk can be linked to volatility risk. So, increases in volatility and market downturn can help identify momentum crashes. By generating dynamic weights for the momentum portfolio based on the patterns mentioned above, one can outperform the "standard static momentum strategy"(222). 
+
+## Questions and Extensions
+
+
+
+
+
+
+# (2) Conrad Yavuz, "Momentum and Reversal: Does What Goes Up Always Come Down?", Review of Finance 2016
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
