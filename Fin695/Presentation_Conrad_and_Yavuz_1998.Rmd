@@ -36,7 +36,7 @@ Does momentum, though, necessarily imply reversals?
 
 ## Motivation and Contribution
 
-Authors show:
+Connection between Momentum and Reversal
 
 - No pervasive link between short-term momentum and long-run reversal
 - First, momentum portfolios with true momentum do not have long-run reversals
@@ -74,15 +74,13 @@ Studies that jointly examine momentum and reversals
  + Barberis, Shleifer, and Vishny, 1998
  + Hong and Stein, 1999
 
-No necessary connection
-
- + Rouwenhorst, 1998
 
 
 
 
+## Research Question and Hypothesis
 
-
+If momentum and reversal patterns are linked:
 
 
 
@@ -95,9 +93,27 @@ If momentum and reversal patterns are linked:
 (1) Portfolios of relative strength should experience both momentum and reversal patterns
 
 
+
+
+## Research Question and Hypothesis
+
+If momentum and reversal patterns are linked:
+
+
+(1) Portfolios of relative strength should experience both momentum and reversal patterns
 (2) Momentum and reversal patterns should happen consecutively
 
 
+
+
+
+## Research Question and Hypothesis
+
+If momentum and reversal patterns are linked:
+
+
+(1) Portfolios of relative strength should experience both momentum and reversal patterns
+(2) Momentum and reversal patterns should happen consecutively
 (3) Strong momentum should predict stronger reversals
 
 
@@ -108,18 +124,46 @@ If momentum and reversal patterns are linked:
 ## Key Findings
 
 - Realized Momentum Portfolios less likely to exhibit reversal than expected by random chance
+
+## Key Findings
+
+- Realized Momentum Portfolios less likely to exhibit reversal than expected by random chance
 - Portfolio of stocks which has momentum in first 6 months does not significantly possess reversal for as long as five years
-- Losers stay losers - have significant reversal returns in 12-24 month period
+
+
+## Key Findings
+
+- Realized Momentum Portfolios less likely to exhibit reversal than expected by random chance
+- Portfolio of stocks which has momentum in first 6 months does not significantly possess reversal for as long as five years
+- Reversals keep unwinding - have significant reversal returns in 12-24 month period
+
+
+## Key Findings
+
+- Realized Momentum Portfolios less likely to exhibit reversal than expected by random chance
+- Portfolio of stocks which has momentum in first 6 months does not significantly possess reversal for as long as five years
+- Reversals keep unwinding - have significant reversal returns in 12-24 month period
+- MAX (MIN) portfolios display momentum (reversal) but no reversal (momentum). 
+    - Results hold controlling for illiquidity, asset growth, investment/sales, return on assets
+
+
+## Key Findings
+
+- Realized Momentum Portfolios less likely to exhibit reversal than expected by random chance
+- Portfolio of stocks which has momentum in first 6 months does not significantly possess reversal for as long as five years
+- Reversals keep unwinding - have significant reversal returns in 12-24 month period
 - MAX (MIN) portfolios display momentum (reversal) but no reversal (momentum). 
     - Results hold controlling for illiquidity, asset growth, investment/sales, return on assets
     
+- Some potential sources of momentum do not explain MAX portfolio
 
 
 
+## Roadmap
 
-
-
-
+(1) Are Momentum Patterns Linked?
+(2) Identifying Stocks with Momentum versus Reversal
+(3) Understanding Sources of Momentum
 
 
 
@@ -127,13 +171,24 @@ If momentum and reversal patterns are linked:
 
 ## Are Momentum Patterns Linked? - Data
 
-- All stocks (share code 10, 11) on NYSE, Amex, and Nasdaq
+- All CRSP stocks (share code 10, 11) on NYSE, Amex, and Nasdaq
 - January 1965 thorugh December 2010
 
 
 Define a stock as _winner_ (_loser_) if prior six month return is higher (lower) than the average prior six month return of all stocks. 
 
-Typical WML portfolio has returns consistent with prior studies: momentum followed by reversals
+
+
+
+## Are Momentum Patterns Linked? - Data
+
+- All CRSP stocks (share code 10, 11) on NYSE, Amex, and Nasdaq
+- January 1965 thorugh December 2010
+
+
+Define a stock as _winner_ (_loser_) if prior six month return is higher (lower) than the average prior six month return of all stocks. 
+
+First Finding: Typical WML portfolio has returns consistent with prior studies: momentum followed by reversals
 
 
 
@@ -201,7 +256,7 @@ What about magnitude of reversals?
 ## Are Momentum Patterns Linked? - Summary
 
 
-Hypothesis 1: _If momentum and reversal pattersn are linked, a winner (loser) from the formation period will over- (under-)perform in the intermediate term, and then go on to under- (over-)perform._
+_If momentum and reversal pattersn are linked, a winner (loser) from the formation period will over- (under-)perform in the intermediate term, and then go on to under- (over-)perform._
 
 
 - Significantly less portion of realized momentum stocks reverse
@@ -229,12 +284,14 @@ _If we can identify at the time of portfolio formation, those securities that ar
 
 
 MAX Portfolio:
+
 - Highest Risk tercile winners
 - Lowest Risk tercile losers
 - Buys high B/M and small winners
 - Sells low B/M and large losers
 
 Min Portfolio:
+
 - Lowest Risk tercile winners
 - Highes Risk tercile losers
 
@@ -293,6 +350,53 @@ No matter what the test, results are consistent with using standard FF 3-factor 
 
 
 
+## Understanding Sources of Momentum 
+
+
+
+Within these portfolios, what can explain some of the persistent returns from momentum?
+
+Look at relation to:
+
+(1) Behavioral Bias
+
+
+
+
+
+
+## Understanding Sources of Momentum 
+
+
+
+Within these portfolios, what can explain some of the persistent returns from momentum?
+
+Look at relation to:
+
+(1) Behavioral Bias
+(2) Investor Sentiment
+
+
+
+
+
+
+## Understanding Sources of Momentum 
+
+
+
+Within these portfolios, what can explain some of the persistent returns from momentum?
+
+Look at relation to:
+
+(1) Behavioral Bias
+(2) Investor Sentiment
+(3) Liquidity Constraints
+
+
+
+
+
 
 ## Understanding Sources of Momentum 
 
@@ -313,6 +417,7 @@ Look at relation to:
 ## Behavioral Bias
 
 Market States - lagged returns of overall market 
+
     + Proxy for behavioral bias
     + Aggregrate Investor Confidence
     
@@ -364,7 +469,7 @@ Momentum returns should be higher in liquid markets (Avramov, Cheng, and Hameed,
 
 Test for undiscovered risk factor, such as business cycle
 
-- estimate predicted returns using macro factors (Chen, Roll, and Ross, 1986)
+- Estimate predicted returns using macro factors (Chen, Roll, and Ross, 1986)
     (1) change in monthly industrial production
     (2) unexpected inflation
     (3) change in expected inflation

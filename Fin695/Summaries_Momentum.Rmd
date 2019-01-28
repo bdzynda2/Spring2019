@@ -9,7 +9,7 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# (1) Danie & Moskowitz, "Momentum Crashes", JFE 2016
+# (1) Daniel & Moskowitz, "Momentum Crashes", JFE 2016
 
 ## Research Question and Design
 
