@@ -39,8 +39,8 @@ Does momentum, though, necessarily imply reversals?
 Connection between Momentum and Reversal
 
 - No pervasive link between short-term momentum and long-run reversal
-- First, momentum portfolios with true momentum do not have long-run reversals
-- Second, momentum portfolios with reversal in short run continue with reversal in long run. 
+- Momentum portfolios with true momentum do not have long-run reversals
+- Momentum portfolios with reversal in short run continue with reversal in long run. 
 - Then, apparent link occurs when portfolios are merged
 
 
@@ -49,7 +49,12 @@ Connection between Momentum and Reversal
 
 
 
+## Motivation and Contribution
 
+Connection between Momentum and Reversal
+
+- Characteristics of stocks exhibiting momentum
+- Potential sources of momentum
 
 
 
@@ -68,12 +73,15 @@ Long-Run Reversals Not Significant
 
  + Fama and French, 1996
 
-Studies that jointly examine momentum and reversals
+Studies that jointly explain momentum and reversals together
 
  + Daniel, Hirshleifer, Subrahmanyam, 1998
  + Barberis, Shleifer, and Vishny, 1998
  + Hong and Stein, 1999
 
+Evidence to the contrary
+
+  + Rouwenhorst, 1998
 
 
 
@@ -135,14 +143,14 @@ If momentum and reversal patterns are linked:
 
 - Realized Momentum Portfolios less likely to exhibit reversal than expected by random chance
 - Portfolio of stocks which has momentum in first 6 months does not significantly possess reversal for as long as five years
-- Reversals keep unwinding - have significant reversal returns in 12-24 month period
+- Reversals keep reversing - have significant reversal returns in 12-24 month period
 
 
 ## Key Findings
 
 - Realized Momentum Portfolios less likely to exhibit reversal than expected by random chance
 - Portfolio of stocks which has momentum in first 6 months does not significantly possess reversal for as long as five years
-- Reversals keep unwinding - have significant reversal returns in 12-24 month period
+- Reversals keep reversing - have significant reversal returns in 12-24 month period
 - MAX (MIN) portfolios display momentum (reversal) but no reversal (momentum). 
     - Results hold controlling for illiquidity, asset growth, investment/sales, return on assets
 
@@ -188,9 +196,9 @@ Define a stock as _winner_ (_loser_) if prior six month return is higher (lower)
 
 Define a stock as _winner_ (_loser_) if prior six month return is higher (lower) than the average prior six month return of all stocks. 
 
-First Finding: Typical WML portfolio has returns consistent with prior studies: momentum followed by reversals
+## Are Momentum Patterns Linked? - Data
 
-
+Typical WML portfolio has returns consistent with prior studies: momentum followed by reversals
 
 
 ## Are Momentum Patterns Linked? - Data
@@ -256,7 +264,7 @@ What about magnitude of reversals?
 ## Are Momentum Patterns Linked? - Summary
 
 
-_If momentum and reversal pattersn are linked, a winner (loser) from the formation period will over- (under-)perform in the intermediate term, and then go on to under- (over-)perform._
+_If momentum and reversal patterns are linked, a winner (loser) from the formation period will over- (under-)perform in the intermediate term, and then go on to under- (over-)perform._
 
 
 - Significantly less portion of realized momentum stocks reverse
@@ -273,6 +281,12 @@ _If momentum and reversal pattersn are linked, a winner (loser) from the formati
 _If we can identify at the time of portfolio formation, those securities that are likely to experience momentum or reversal, we may be able to better understand the sources of these return patterns._
 
 - Form size and book-to-market ratio-based portfolios that differ in expected returns
+- High Risk stocks: high book-to-market, low market capitalization (small value)
+- Low Risk stocks: low book-to-market, high market capitalization (large growth)
+
+
+## Identifying Stocks with Mom versus Rev - Method 
+
 - Put into three (tercile) groups based on market capitalization and book to market ratio:
     (1) High Risk - high risk stocks according to one measure and medium risk for the other
     (2) Low Risk  - low risk stocks according to one measure and medium risk for the other
@@ -349,6 +363,21 @@ No matter what the test, results are consistent with using standard FF 3-factor 
 
 
 
+## Identifying Stocks with Mom versus Rev - Results 
+
+- All but three tests had positive returns in MAX portolio up to one year
+    - All had six month positive return
+- Only Carhart four-factor alphas had negative return in first six months for MIN
+    - Every model had negavite alpha for MIN in 12-24 months
+
+## Identifying Stocks with Mom versus Rev - Results 
+
+- Highest positive return in MAX was Pastor-Stambaugh alpha (1.21)
+- Lowest was Carhart Four-Factor (0.40)
+
+- Lowest negative return in MIN was Carhart Four-Factor (-0.49)
+- Highest negative return in MIN was Fama-French Five-Factor (-0.25)
+
 
 ## Understanding Sources of Momentum 
 
@@ -418,8 +447,8 @@ Look at relation to:
 
 Market States - lagged returns of overall market 
 
-    + Proxy for behavioral bias
-    + Aggregrate Investor Confidence
++ Proxy for behavioral bias
++ Aggregrate Investor Confidence
     
 - Regress cumulative returns of momentum portfolio on risk factors
 - Examine relation between residuals of regression and past market returns and its square
@@ -481,7 +510,7 @@ Test for undiscovered risk factor, such as business cycle
 ## Macroeconomic Factors
 
 - Macro Factors explain a large portion of momentum returns
-- Still are significant returns for MAX portfolio
+- Significant Returns in MAX Portfolio still remain
 
 
 
@@ -497,13 +526,17 @@ Test for undiscovered risk factor, such as business cycle
 
 ## Summary
 
+- Stocks displaying momentum in first six months do not significantly reverse
+- Contrarian stocks in first six months reverse 12-24 months after
+- Then, portfolios appear to link momentum and reversal
+- Returns on MAX and MIN portfolios not explained by other market factors
+- MAX returns not explained by other potential sources of momentum
 
 
 ## Extension
 
-(1) What explains positive abnormal returns of MAX portfolio? Why is MIN explained?
-(2) Are categorizations of "high risk" and "low risk" from market cap and book-to-market sufficient? Are there better metrics?
-(3) Are results given by construction - would one expect high returns from how portfolios were created?
+(1) What explains positive abnormal returns of MAX portfolio? Why is MIN explained? Ommitted Risk Factor?
+(2) Properly accounts for crashes?
 
 
 
