@@ -1,0 +1,150 @@
+---
+title: "Are IFRS-based and US GAAP-based Accounting Amounts Comparable?"
+author: "Barth, Landsman, Lang, and Williams (JAE 2012)"
+date: "February 6, 2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Section I: Overview
+
+## Background
+
+ + In 2007 SEC allowed for non-US firms using IFRS to file financial statements without using GAAP
+    + Implicit recognition by SEC of IFRS to sufficiently capture information comparable to GAAP
+ + SEC considered universalizing a set of standards in 2008 to lead US firms to apply IFRS
+ + Current adoption of IFRS by US firms seems unlikely at present:
+ 
+  > "While it is now clear that U.S. GAAP and IFRS will continue to coexist in our public capital markets for the foreseeable future, it is just as clear that the efforts to enhance the respective standards and to reduce differences between them should continue"[^1]
+  
+## The Big Picture
+
+How comparable are accounting amounts between non-US firms using International Finance Reporting Standards (IFRS) and US firms using US Generally Accepted Accounting Principles (GAAP)?
+
+ + Use accounting system comparability - accounting amount predicting outcome of one system predict the same outcome of a different system?
+ + Use value relevance comparbility - is the same variation in outcomes the same as explained by both systems?
+ + Foreign firms have greater comparability to US Firms on both measures when they apply IFRS than non-US domestic standards
+ + Comparability is significantly greater for firms that adopt IFRS mandatorily in countries with common law legal orign, strong law enforcement, and more recently
+
+
+## Related Research and Contribution
+
+Many studies have looked at this topic before. Some examples include:
+
+ (1) Examine accounting amounts and and economic implications of non-US firms applying IFRS and domestic standards
+ (2) Compare accounting amounts and economic implications of US firms applying US GAAP and non-US firms applying doomestic standards
+ (3) Look at non-US companies using IFRS and US GAAP (tends to be country specific and not generalizable)
+ (4) Compare properties of the accounting amounts of IFRS firms listed on US markets and thus using GAAP - gives mixed results
+ 
+ 
+This study differs in research design of former studies for at least four reasons:
+
+  (1) Former studies do not include US firms. This one, by contrast, does. 
+  (2) Properties of accounting amounts from reconciliation of GAAP for foreign firms are not same as application of normal US GAAP for US domestic firms
+  (3) Reconciliation may have induced cross-listed firms to minimize reconciling items
+  (4) Within-firm comparisons of GAAP and IFRS based accounting amounts control for factors other than accounting standards
+ 
+
+# Section II: Predictions
+
+## Comparablility before and after IFRS adoption
+
+__Prediction 1:__ _Comparability between SEC and IFRS firms increase after IFRS firms adopt IFRS_
+
+
+
+## Comparability after IFRS adoption
+
+__Prediction 2:__ _There will be greater comparability for firms in countries with common law legal origns and high enforcement_
+
+
+
+## Potential Sources of Comparability Differences
+
+Test for differences using three dimensions of accounting quality:
+
+ + Earnings Smoothing
+ + Accural Quality
+ + Earnings Timeline
+
+
+_Finding (a) an increase in comparability after IFRS firms adopt IFRS, and (b) that the difference in earnings smotthing between IFRS and US firms decreased after the IFRS firms adopt IFRS is consistent with the reduction in the difference in earnings smoothing being a source of the increased comparability_
+
+
+
+
+
+# Section III: Research Desgin
+
+
+
+## Assessing Comparability
+
+Use following variables: stock price, stock return, cash flow (economic outcomes), earnings and book value (accounting amounts).
+
+ + Get IFRS firms with data the year they adopt IFRS and the year before
+ + Identify all US firms in the same industry as each IFRS firm
+    + Minimize the aggregate size differences between IFRS and matched US firms in IFRS firm's adoption year
+ + Eliminate any matched pair for which sample size differnce exceeds 50% in magnitude
+ + Years are inclusive for any matched firm where for which all have data in that given year
+ 
+Matched Sample Design that pairs similar IFRS firms with US firms helps mitigate effects of inferences on accounting and economic differences between matched firms unattributable to the financial reporting system. Additionally, mitigates the effect on inferences of industry differences in cost of capital (affects how accounting amounts relate to economic outcomes). 
+
+
+__Matched Sample Design__
+
+
+>A matched pairs design is a special case of a randomized block design. It can be used when the experiment has only two treatment conditions; and subjects can be grouped into pairs, based on some blocking variable. Then, within each pair, subjects are randomly assigned to different treatments.
+
+>Imagine a matched pair design for medical testing where 1000 subjects each pair receive one of two treatments - a placebo or a cold vaccine. The 1000 subjects are grouped into 500 matched pairs. Each pair is matched on gender and age. For example, Pair 1 might be two women, both age 21. Pair 2 might be two men, both age 21. Pair 3 might be two women, both age 22; and so on. 
+
+>For this hypothetical example, the matched pairs design is an improvement over a completely randomized design. Like the completely randomized design, the matched pairs design uses randomization to control for confounding. However, unlike the other design, the matched pairs design explicitly controls for two potential lurking variables - age and gender.[^2]
+
+
+
+
+## Accounting System Comparability Metrics
+
+Construct Accounting System Comparability as follows:
+
+ (1) Estimate relations between stock price and earnings and equity book value separately for US and IFRS firms
+ (2) For each set of firms, calculate within-sample fitted stock price
+ (3) For each set of firms, calculate fitted stock price using multiples from other firms. 
+ (4) For each set of firms, calculate absolute value of the difference between fitted stock price obtained in steps (2) and (3). 
+ (5) For each IFRS and matched US firm-year pair, average differences in fitted stock price obtained in step (4). 
+ (6) Calculate price, return, cash flow comparability metrics: mean, median, std. 
+ 
+Use T-test to test for mean differences. Use Wilcoxon Rand Sum Test test test for median differences. Use bootstrapping to test for significant differences of standard deviations. 
+
+
+To test whether accounting system comparability changed after non-US IFRS firms adopt IFRS, compute accounting system comparability metrics using years before and after adoption of IFRS to compare. 
+
+To test whether accounting system comparability differes after IFRS firms adopt IFRS depending on legal origin (common law vs code law) and mandatorily (i.e., law enforcement), partition firm-year observations after adopting IFRS into demarcated groups and calculate separate accounting system metric for each group. 
+
+
+
+## Value Relevance Comparability Metrics
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[^1]: SEC, "A U.S. Imperative: High-Quality, Globally Accepted Accounting Standards", 5 January, 2017, https://www.sec.gov/news/statement/white-2016-01-05.html
+
+[^2]: https://stattrek.com/statistics/dictionary.aspx?definition=matched%20pairs%20design

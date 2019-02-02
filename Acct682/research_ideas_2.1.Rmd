@@ -1,0 +1,24 @@
+---
+title: "Research Idea 3"
+author: "David Zynda"
+date: "February 1, 2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Research Idea (1)
+
+What words in post-earnings announcement conference calls are most powerful in changing prices in intra-day data? Are some words seen as bettering or worsening prices as investors interpret that information? Can deception be used - if so, can the market detect it? To what degree does such soft information matter, and how persistent is it? 
+
+Regarding words, perhaps some conference call transcripts (hopefully available) can be analyzed for key words or phrases. With that categorization, initial testing with intra-day returns can be matched with those calls and key phrases and words to assess effect. 
+
+
+
+## Reseach Idea (2) 
+
+What types of firms suffer the most under periods of heightened policy uncertainty (according to the Baker Bloom Davis Index)? Two thoughts follow: what type of stocks do investors flee towards during these times. For a corporate question, which types of firms alter investment plans? How might this also affect their capital structure?
+

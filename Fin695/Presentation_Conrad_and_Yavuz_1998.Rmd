@@ -460,10 +460,10 @@ Market States - lagged returns of overall market
 
 - Standard momentum portfolio returns are explained by lagged market returns
 - MAX portfolio returns not explained by lagged market returns
-- Lagged Market Returns explain MIN portfolio
+- Lagged Market Returns explain MIN portfolio initially, but not later on
 
 
-Then, lagged market returns are not an important determinant of MAX returns
+Then, lagged market returns are not an important determinant of MAX, MIN returns.
 
 
 
@@ -477,7 +477,7 @@ Then, lagged market returns are not an important determinant of MAX returns
 
 
 Sentiment Index is correlated with standard momentum portfolio (nonsignificance at 10% level)
-Not significant for MAX portfolio
+Not significant for MAX portfolio. Not significant for MIN later on
 
 
 
@@ -510,7 +510,8 @@ Test for undiscovered risk factor, such as business cycle
 ## Macroeconomic Factors
 
 - Macro Factors explain a large portion of momentum returns
-- Significant Returns in MAX Portfolio still remain
+- Significant Returns in MAX Portfolio still remain short term
+- Significant Returns in MIN portfolio occur in long term
 
 
 
@@ -530,13 +531,26 @@ Test for undiscovered risk factor, such as business cycle
 - Contrarian stocks in first six months reverse 12-24 months after
 - Then, portfolios appear to link momentum and reversal
 - Returns on MAX and MIN portfolios not explained by other market factors
-- MAX returns not explained by other potential sources of momentum
+- MAX and MIN returns not explained by other potential sources of momentum
+
+
 
 
 ## Extension
 
-(1) What explains positive abnormal returns of MAX portfolio? Why is MIN explained? Ommitted Risk Factor?
+(1) What explains positive abnormal returns of MAX portfolio initially? Why is MIN explained at first but not later on? Ommitted Risk Factor?
+
+
+## Extension
+
+(1) What explains positive abnormal returns of MAX portfolio initially? Why is MIN explained at first but not later on? Ommitted Risk Factor?
 (2) Properly accounts for crashes?
+
+## Extension
+
+(1) What explains positive abnormal returns of MAX portfolio initially? Why is MIN explained at first but not later on? Ommitted Risk Factor?
+(2) Properly accounts for crashes?
+(3) Are these results by construction?
 
 
 
