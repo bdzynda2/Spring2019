@@ -24,10 +24,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 How comparable are accounting amounts between non-US firms using International Finance Reporting Standards (IFRS) and US firms using US Generally Accepted Accounting Principles (GAAP)?
 
- + Use accounting system comparability - accounting amount predicting outcome of one system predict the same outcome of a different system?
- + Use value relevance comparbility - is the same variation in outcomes the same as explained by both systems?
+ + Use accounting system comparability - accounting amount predicting economic outcome (e.g. prices, returns, cashflows) of one system predict the same outcome of a different system?
+ + Use value relevance comparability - is the same variation in outcomes the same as explained by both systems?
  + Foreign firms have greater comparability to US Firms on both measures when they apply IFRS than non-US domestic standards
- + Comparability is significantly greater for firms that adopt IFRS mandatorily in countries with common law legal orign, strong law enforcement, and more recently
+ + Comparability is significantly greater for firms that adopt IFRS mandatorily in countries with common law legal orign, strong law enforcement, and more recently.
 
 
 ## Related Research and Contribution
@@ -79,7 +79,16 @@ _Finding (a) an increase in comparability after IFRS firms adopt IFRS, and (b) t
 
 # Section III: Research Desgin
 
+## Data
 
++ Use firms that adopted IFRS between 1995 and 2006. 
+    + Pre-adoption as early as 1992, and post-adoption as late as 2009
++ Get IFRS firms from Worldscope, despite some classification errors. 
++ Exclude US cross-listings
++ US Firms from DataStream. Winsorize.
++ Leave out Housing Crisis period. 
++ Australia, France, Germany, and UK account for 60% of all firm-year observations
++ Mostly manufacturing, Finance, and Service firms (76%)
 
 ## Assessing Comparability
 
@@ -117,28 +126,80 @@ Construct Accounting System Comparability as follows:
  (5) For each IFRS and matched US firm-year pair, average differences in fitted stock price obtained in step (4). 
  (6) Calculate price, return, cash flow comparability metrics: mean, median, std. 
  
+ 
+__Example:__ Stock Price
+
+
+US firms stock price can be estimated as: 
+
+$$P_{it}^{US} =\beta_0^{US} + \beta_1^{US}BVE_{it}^{US}  + \beta_2^{US}NI_{it}^{US} + \varepsilon_{it}^{US}$$ 
+
+Similarly, estimate $P_{it}^{IFRS}$ with respect to estimates and data pertaining to $IFRS$. 
+
+Then, calculate within-sample fitted stock price for US firms using the estimated 
+$$\hat{P}_{it}^{US,US} = \hat{\beta_0}^{US} +\hat{\beta}_1^{US}BVE_{it}^{US}  + \hat{\beta}_2^{US}NI_{it}^{US}$$
+And, use the $IFRS$ estimated model on the US book value of equity and net income data.
+
+$$\hat{P}_{it}^{US,IFRS} = \hat{\beta_0}^{IFRS} +\hat{\beta}_1^{IFRS}BVE_{it}^{US}  + \hat{\beta}_2^{IFRS}NI_{it}^{US}$$
+ 
+Repeat the above by swapping the nations for each equation. This way, we can calculate the absolute difference between fitted stock prices, stock returns, and cash flow:
+
+$$PRICE\_Diff_{it}^{US} = \bigg | \hat{P}_{it}^{US, US} - \hat{P}_{it}^{US,IFRS} \bigg |$$
+$$PRICE\_Diff_{it}^{IFRS} = \bigg | \hat{P}_{it}^{IFRS, IFRS} - \hat{P}_{it}^{IFRS,US} \bigg |$$
+ 
+Then, the differences between all matched firm paits can be averaged. With that, calculate mean, median, and standard deviation coefficients of these averaged differences 
+ 
 Use T-test to test for mean differences. Use Wilcoxon Rand Sum Test test test for median differences. Use bootstrapping to test for significant differences of standard deviations. 
 
+_What is bootstrapping?_
 
-To test whether accounting system comparability changed after non-US IFRS firms adopt IFRS, compute accounting system comparability metrics using years before and after adoption of IFRS to compare. 
+> "In statistics, bootstrapping is any test or metric that relies on random sampling with replacement. Bootstrapping allows assigning measures of accuracy (defined in terms of bias, variance, confidence intervals, prediction error or some other such measure) to sample estimates. This technique allows estimation of the sampling distribution of almost any statistic using random sampling methods. Generally, it falls in the broader class of resampling methods.[^3]"
 
-To test whether accounting system comparability differes after IFRS firms adopt IFRS depending on legal origin (common law vs code law) and mandatorily (i.e., law enforcement), partition firm-year observations after adopting IFRS into demarcated groups and calculate separate accounting system metric for each group. 
+In this case, they randomly assign assign a US/IFRS firm to a IFRS/US firm. Then, the matched pair is randomly assigned to the subgroup. Between sample of two, calculate difference. Repeating at least 1000 times, a distribution is generated. Then, a standard deviation difference can be deemed "significant" if the sample difference exceeds 950 of the differences calculated based on the bootstrapping procedure. Requires no new data, and no distributional assumptions. Interesting to note, bootstrapping will, on average, leave unsampled about 33% of the original data.  
 
 
+
+To test whether accounting system comparability changed after non-US IFRS firms adopt IFRS, compute accounting system comparability metrics using years before and after adoption of IFRS to compare. (_Table III_)
+
+To test whether accounting system comparability differes after IFRS firms adopt IFRS depending on legal origin (common law vs code law) and mandatorily (i.e., law enforcement), partition firm-year observations after adopting IFRS into demarcated groups and calculate separate accounting system metric for each group (_Table IV_). 
+
+![This is a table not a figure!](682_markdown_pics/barth1.PNG)
+
+![](682_markdown_pics/barth2.PNG)
+
+__Results:__
+
+ + Price, Return, and Cash Flow comparability metrics are significantly difference from before and after IFRS firms adopt IFRS. 
+ + Firms which madatorily adopt IFRS have greater comparability with US firms - must be more consistent in application and enforcement of the law. 
+ + Generally the case that comparable standards are more likely in countries with common law. 
+ + Higher enforcement entails more comparability.
 
 ## Value Relevance Comparability Metrics
 
 
+This test uses explanatory power of regressions to see if the variation between US and IFRS firms is consistently explained for an economic outcome. 
+
+![](682_markdown_pics/barth3.PNG)
+![](682_markdown_pics/barth4.PNG)
 
 
+__Results:__
+
+ + Difference in value relevance decreased significantly from when IFRS firms applied non-US domestic standards to when they applied IFRS. 
+    + Consistent with prediction that value relvance is higher for US firms than for IFRS firms before they adopt IFRS. 
+    + fter IFRS firms adopt, value relevance is higher for US firms, significantly for price and cash flow. 
+ + Table 6 shows similarly story of Table 3, but returns are never signficant. 
+ 
+ 
+## Accounting Quality
+
+Lastly, how can one assess accounting quality?
+
+Use Five Metrics as found in _Table 7_ footnotes. 
 
 
-
-
-
-
-
-
+![](682_markdown_pics/barth5.PNG)
+![](682_markdown_pics/barth6.PNG)
 
 
 
@@ -148,3 +209,4 @@ To test whether accounting system comparability differes after IFRS firms adopt 
 [^1]: SEC, "A U.S. Imperative: High-Quality, Globally Accepted Accounting Standards", 5 January, 2017, https://www.sec.gov/news/statement/white-2016-01-05.html
 
 [^2]: https://stattrek.com/statistics/dictionary.aspx?definition=matched%20pairs%20design
+[^3]: https://en.wikipedia.org/wiki/Bootstrapping_(statistics)
