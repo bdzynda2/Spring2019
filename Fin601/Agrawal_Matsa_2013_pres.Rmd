@@ -42,20 +42,16 @@ knitr::opts_chunk$set(echo = FALSE)
 _NPV[Debt Issue] = NPV[Tax Shield] + NPV[Cost of Financial Distress] + $\Delta$ Labor Expense_
 
 ## Introduction
+
 ### Contribution and Hypothesis
-
-
-
 - Because of labor frictions, the cost of debt becomes higher. _Because debt financing increases the probability of layoffs in distress, it raises the compensation that workers require today to bear increased unemployment risk_. \
-
-
 - Provides novel empirical evidence that worker unemployment risk significantly impacts firms' corporate financial policies
 
 
 
 
 
-### Contribution and Hypothesis
+## Contribution and Hypothesis
 
 
 
@@ -156,10 +152,11 @@ Controls include proportion of fixed assets, M/B ratio, log of sales, probabilit
 ## Results
 
 - 100 log point increase in total benefits result in 4.5% greater average market leverage (1) 
-- Accounting for firms whose headquarters and high percentage of workers are in different states gives $\alpha = 5.7 (3) 
+- Accounting for firms whose headquarters and high percentage of workers are in different states gives $\alpha = 5.7$ (3) 
 - Still significant controlling for firm characteristics and macroeconomic conditions (4) and (2) 
 - Significant across first differences (5) 
-- Significant when excluding outlier observations
+- Significant when excluding outlier observation
+
 ## Results
 
 ![](am13_3.PNG)
@@ -176,7 +173,106 @@ Controls include proportion of fixed assets, M/B ratio, log of sales, probabilit
 
 
 
-##
+## Identification Analysis
+
+### (1) Control for local macroeconomic conditions
+
+Have minimal effect on estimated association between UI benefits and leverage (in columns 2-6 of Table 3)
+
+
+
+## Identification Analysis
+
+### (2) Timing
+
+If poor, unobserved economic conditions cause firms to increase leverage and induce legislators to raise UI benefits, one should expect to see increases in leverage before benefits improve.
+
+- Table 4 shows inclusion os controls for contemporaneous and forward values of UI benefits in leverage regressions does not affect correlation beween lagged UI benefits and corporate leverage ratio
+
+## Identification Analysis
+
+![Timing](am13_4.PNG)
+
+
+
+## Identification Analysis
+
+### (3) Heterogeneities
+
+(1) Would expect to find stronger relation between UI benefits and corporate financial policies in industries where labor unemployment risk is more relevant
+
+(2) Relation between UI generosity and firms' financial policies should be stronger for financially constrained firms - financing frictions increase unemployment risk and means for higher wage premiums demanded. Conservative financing should ensue. 
+
+
+## Heterogeneities - Greater Unemployment Risk
+
+
+![](am13_5.PNG)
+
+
+## Heterogeneities - Financing Constraints
+
+![](am13_6.PNG)
+
+
+
+## Identification Analysis
+
+### (4) Local Unobservable Economic Shocks
+
+- Separate firms who have higher intrastate commerce
+- Firms with higher out of state sales have greater relationship between UI generosity and leverage
+
+
+## Identification Analysis
+
+![](am13_7.PNG)
+
+
+
+
+## Identification Analysis
+
+### (5) Profits
+
+No signs of poor operating performance when benefits increase
+
+![](am13_8.PNG)
+
+
+
+## Identification Analysis
+
+### (6) Neighboring states
+
+If firm's operations are concentrated at firm HQ, generosity of UI in neighboring states should bear no effect
+
+
+## Neighboring states
+
+![](am13_9.PNG)
+
+
+## Identification Analysis
+
+### Extended Benefits
+
+- Extended benefits excluded from analysis to minimize concern of ommitted variables. 
+
+
+
+## Alternative Mechanisms
+
+### Pure Cash Flow Effect
+- When UI benefits increase, firms' premium costs increase. Less money to pay debt, then, and leverage is increases
+- Rejected by data (from identification analysis looking at profitability)
+
+### Strategic Leverage
+- Greater UI benefits could lead to wage bargaining. Firms could raise leverage to maintain tougher bargining stance. 
+- Repeat analysis separating firms based on high and low union presence. 
+- Relation between UI benefits and leverage are not significantly different between groupings
+
+
 
 
 

@@ -35,7 +35,7 @@ How comparable are accounting amounts between non-US firms using International F
 Many studies have looked at this topic before. Some examples include:
 
  (1) Examine accounting amounts and and economic implications of non-US firms applying IFRS and domestic standards
- (2) Compare accounting amounts and economic implications of US firms applying US GAAP and non-US firms applying doomestic standards
+ (2) Compare accounting amounts and economic implications of US firms applying US GAAP and non-US firms applying domestic standards
  (3) Look at non-US companies using IFRS and US GAAP (tends to be country specific and not generalizable)
  (4) Compare properties of the accounting amounts of IFRS firms listed on US markets and thus using GAAP - gives mixed results
  
@@ -62,18 +62,6 @@ __Prediction 2:__ _There will be greater comparability for firms in countries wi
 
 
 
-## Potential Sources of Comparability Differences
-
-Test for differences using three dimensions of accounting quality:
-
- + Earnings Smoothing
- + Accural Quality
- + Earnings Timeline
-
-
-_Finding (a) an increase in comparability after IFRS firms adopt IFRS, and (b) that the difference in earnings smotthing between IFRS and US firms decreased after the IFRS firms adopt IFRS is consistent with the reduction in the difference in earnings smoothing being a source of the increased comparability_
-
-
 
 
 
@@ -88,7 +76,7 @@ _Finding (a) an increase in comparability after IFRS firms adopt IFRS, and (b) t
 + US Firms from DataStream. Winsorize.
 + Leave out Housing Crisis period. 
 + Australia, France, Germany, and UK account for 60% of all firm-year observations
-+ Mostly manufacturing, Finance, and Service firms (76%)
++ Mostly Manufacturing, Finance, and Service firms (76%)
 
 ## Assessing Comparability
 
@@ -149,19 +137,19 @@ $$PRICE\_Diff_{it}^{IFRS} = \bigg | \hat{P}_{it}^{IFRS, IFRS} - \hat{P}_{it}^{IF
  
 Then, the differences between all matched firm paits can be averaged. With that, calculate mean, median, and standard deviation coefficients of these averaged differences 
  
-Use T-test to test for mean differences. Use Wilcoxon Rand Sum Test test test for median differences. Use bootstrapping to test for significant differences of standard deviations. 
+Use T-test to test for mean differences. Use Wilcoxon Rank Sum Test (nonparametric  alternative  to  the  two-samplet-test  which  is  based  solely  on  the  order  in  which  the  observationsfrom the two samples fall.) test test for median differences. Use bootstrapping to test for significant differences of standard deviations. 
 
 _What is bootstrapping?_
 
 > "In statistics, bootstrapping is any test or metric that relies on random sampling with replacement. Bootstrapping allows assigning measures of accuracy (defined in terms of bias, variance, confidence intervals, prediction error or some other such measure) to sample estimates. This technique allows estimation of the sampling distribution of almost any statistic using random sampling methods. Generally, it falls in the broader class of resampling methods.[^3]"
 
-In this case, they randomly assign assign a US/IFRS firm to a IFRS/US firm. Then, the matched pair is randomly assigned to the subgroup. Between sample of two, calculate difference. Repeating at least 1000 times, a distribution is generated. Then, a standard deviation difference can be deemed "significant" if the sample difference exceeds 950 of the differences calculated based on the bootstrapping procedure. Requires no new data, and no distributional assumptions. Interesting to note, bootstrapping will, on average, leave unsampled about 33% of the original data.  
+In this case, they randomly assign a US/IFRS firm to a IFRS/US firm. Then, the matched pair is randomly assigned to the subgroup. Between sample of two, calculate difference. Repeating at least 1000 times, a distribution is generated. Then, a standard deviation difference can be deemed "significant" if the sample difference exceeds 950 of the differences calculated based on the bootstrapping procedure. Requires no new data, and no distributional assumptions. Interesting to note, bootstrapping will, on average, leave unsampled about 33% of the original data.  
 
 
 
 To test whether accounting system comparability changed after non-US IFRS firms adopt IFRS, compute accounting system comparability metrics using years before and after adoption of IFRS to compare. (_Table III_)
 
-To test whether accounting system comparability differes after IFRS firms adopt IFRS depending on legal origin (common law vs code law) and mandatorily (i.e., law enforcement), partition firm-year observations after adopting IFRS into demarcated groups and calculate separate accounting system metric for each group (_Table IV_). 
+To test whether accounting system comparability differs after IFRS firms adopt IFRS depending on legal origin (common law vs code law) and mandatorily (i.e., law enforcement), partition firm-year observations after adopting IFRS into demarcated groups and calculate separate accounting system metric for each group (_Table IV_). 
 
 ![This is a table not a figure!](682_markdown_pics/barth1.PNG)
 
@@ -169,7 +157,7 @@ To test whether accounting system comparability differes after IFRS firms adopt 
 
 __Results:__
 
- + Price, Return, and Cash Flow comparability metrics are significantly difference from before and after IFRS firms adopt IFRS. 
+ + Price, Return, and Cash Flow comparability metrics are significantly different from before and after IFRS firms adopt IFRS. 
  + Firms which madatorily adopt IFRS have greater comparability with US firms - must be more consistent in application and enforcement of the law. 
  + Generally the case that comparable standards are more likely in countries with common law. 
  + Higher enforcement entails more comparability.
@@ -193,17 +181,40 @@ __Results:__
  
 ## Accounting Quality
 
-Lastly, how can one assess accounting quality?
+__Goal:__ Look at potential sources of differences in comparability across dimensions of accounting quality. Previous literature has provided three areas of assessing quality: earnings smoothing, accrual quality, and earnings timeliness. 
 
-Use Five Metrics as found in _Table 7_ footnotes. 
+__Earnings Smoothing:__ Adjusting fluctuations on realized earnings. The first metric looks at the variance of the change in net income over the variance in the change in cash flows. A higher ratio suggests less earnings smoothing. Second metric is correlation between accruals and cash flows. 
+
+__Accrual Quality:__ Size of accruals can be used as a measure of quality since accruals can be used for manipulation. Their measure regresses accruals on lagged cash flows. Lower standard deviation on residuals indicative of higher quality. 
+
+__Timeliness:__ Metrics are Good News and Bad News measured by $R^2$ from regression of net income scaled by begiining of year price on residual from regression of stock return on country and industry fixed effects ($RETURN^*_{it}$). Higher $R^2$ is sign of greater timeliness. 
 
 
 ![](682_markdown_pics/barth5.PNG)
 ![](682_markdown_pics/barth6.PNG)
 
 
+__Big picture:__ All post-adoption sample periods, except for common law firms, show accounting amounts of US firms exhibit higher quality than IFRS firms. Quality differnce is smaller between US and IFRS firms for mandatory adopters in high enforcement countries. 
+
+## Additional Analysis
+
+(1) Look at differences in regression coefficients used in constructing the comparability metrics
+(2) Repeat Analysis in 2005-2006, 2007-2009
+(3) Test for globalization using non IFRS firms who can't implement it
+(4) Test to see if three largest industries (Finance, Manufacturing, Services) account for most of the results
 
 
+- Differences in Regression coefficients used in constructing the comparability metrics for IFRS and US firms are smaller after IFRS firms adopt IFRS and for post-adoption sample partitions that exhibit greater comparability. 
+- Comparability greater in recent years
+- Globalization does not explain findings
+- Some significant increases in value relevance for the three big sectors consistent with overall sample, with some exceptions in finance sector
+
+
+# New Information in Earnings - Ball and Shivakumar 2008
+
+- How impressed should we be by $R^2$? Is such an account convincing?
+- Danger of trying to fit best models?
+- Other ways of model specification?
 
 
 [^1]: SEC, "A U.S. Imperative: High-Quality, Globally Accepted Accounting Standards", 5 January, 2017, https://www.sec.gov/news/statement/white-2016-01-05.html

@@ -1,0 +1,19 @@
+---
+title: "Research Ideas 4"
+author: "David Zynda"
+date: "February 6, 2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Stock Market Participation and Knowledge
+
+How has stock market participation increased with easier trading platforms such as Robin Hood? Do younger generations have a more positive view?
+
+## 
+
+Has investor confidence eroded with the advent of 24 hour news? In particular, has it worsened effect of "words" of fed officials and Trump tweets? What kind of information has the market learned to trust, and how long does it take to build such trust and reliability? That is, would something like a Trump tweet or constant CNN breaking news notifications be something like the boy who cried wolf?
+

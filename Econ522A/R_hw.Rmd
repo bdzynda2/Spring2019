@@ -1,0 +1,172 @@
+---
+title: 'PS #3 Question 3'
+author: 'David Zynda'
+date: "February 5, 2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Previous Work
+
+```{r, results='hide'}
+## Problem 14
+
+# (a) Generate Data 
+
+x1 = rnorm(1000, 0, 1)
+x2 = rnorm(1000, 0, 1)
+e = rnorm(1000, 0, 1)
+
+y = 1 + x1 + x2 + e
+
+x1 = as.matrix(x1)
+x2 = as.matrix(x2)
+e = as.matrix(e)
+
+y = as.matrix(y)
+
+
+my_lm = lm(y ~ x1 + x2)
+summary(my_lm)
+
+
+# (b) compute residuals
+
+
+t(my_lm$residuals) %*% x1
+t(my_lm$residuals) %*% x2
+
+## (c) verify true residuals are not orthoganol
+
+t(e) %*% x1
+t(e) %*% x2
+
+## (d) Auxiliary Regression
+
+aux = lm(x1 ~ x2)
+
+solve(t(aux$residuals) %*% aux$residuals) %*% (t(aux$residuals) %*% y)
+
+
+## What is E(x'x)
+
+t(x1) %*% x1
+```
+
+
+
+## T-test
+
+### Write a simulation program showing the t-test of the coefficient on $x_{1i}$ being 0 performs as it is derived. 
+
+The simulation below will give an actual parameter value of $0$ for $x_1$ and $1$ for $x_2$. 
+
+```{r}
+x0 = rep(1, 1000)
+x1 = rnorm(1000, 0, 1)
+x2 = rnorm(1000, 0, 1)
+e = rnorm(1000, 0, 1)
+
+y = x0 + 0*x1 + x2 + e
+
+X = as.matrix(cbind(x0, x1, x2))
+
+beta = solve((t(X) %*% X)) %*% (t(X) %*% y)
+
+y_hat = X %*% beta
+
+res = y - y_hat
+res_sq = res ** 2
+stdev = sum(res_sq) / 998
+
+
+## Display beta estimates: first row slope, second row estimate for beta1
+
+beta
+
+
+```
+
+
+
+
+Compare this with the `lm()` package in `R`:
+
+```{r}
+summary(lm(y ~ x1 + x2))
+```
+
+
+Lastly, compute t-stat of $x_1$. The null hypothesis, of course, is that $\beta_1 = 0$. 
+
+```{r}
+
+std_error_beta = stdev * sqrt(1000 / (1000 * t(x1) %*% x1 - sum(x1)^2)) # page 12 http://www.stat.cmu.edu/~hseltman/309/Book/chapter9.pdf
+
+t = (beta[2] - 0) / std_error_beta
+t
+```
+
+
+The t statistic is ```r t```
+
+
+
+
+## F-test
+
+
+Generate Simulation
+
+```{r}
+
+x1 = rnorm(100, 0, 1)
+x2 = rnorm(100, 0, 1)
+e = rnorm(100, 0, 1)
+
+y =  0 * x1 + 0 * x2 + e
+
+```
+
+
+
+```{r}
+
+X = as.matrix(cbind(x1, x2))
+beta = solve(t(X) %*% X) %*% t(X) %*% y
+
+y_hat = X %*% beta 
+res = y - y_hat
+res2 = y - 0
+
+sse_r = t(res2)%*%res2
+sse_u = t(res)%*%res
+
+Fstat = ( ( (sse_r - sse_u) / (100 - 98) ) /  (sse_u / 100))
+
+
+```
+
+
+
+The F-stat is ```r Fstat```. Hence, it is not signficant. 
+
+
+__Significance at the 95% level:__
+```{r}
+qf(.95, df1=100, df2=98)
+```
+
+
+
+
+
+
+
+
+
+
+
