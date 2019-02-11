@@ -105,12 +105,12 @@ Then, changes in unemployment benefits make for a meaningful shock to the cost o
 
 ## Data 
 
-![Correlation of layoff separation rate and market leverage](am13_1.PNG)
+![](am13_1.PNG)
 
 
 ## Data
 
-- Collect data on stat UI benefit laws and firm balance sheet characterisitcs
+- Collect data on state UI benefit laws and firm balance sheet characterisitcs
 - UI benefits from Dept of Labor 1950 - 2008
 - Generosity is measured as maximum benefit amount and duration alllowed
 
@@ -137,7 +137,7 @@ Then, changes in unemployment benefits make for a meaningful shock to the cost o
 
 $$\frac{DEBT_{ist}}{VALUE_{ist}} = \alpha_1LN(MAX\_UI\_BENEFIT)_{st-1}+X_{ist}\beta + \nu_i + \omega_t + \varepsilon_{ist}$$
 
-where $i$ is firm in state $j$ at time $t$. 
+where $i$ is firm in state $s$ at time $t$. 
 
 ### Variables
 
@@ -187,7 +187,7 @@ Have minimal effect on estimated association between UI benefits and leverage (i
 
 If poor, unobserved economic conditions cause firms to increase leverage and induce legislators to raise UI benefits, one should expect to see increases in leverage before benefits improve.
 
-- Table 4 shows inclusion os controls for contemporaneous and forward values of UI benefits in leverage regressions does not affect correlation beween lagged UI benefits and corporate leverage ratio
+- Table 4 shows inclusion of controls for contemporaneous and forward values of UI benefits in leverage regressions does not affect correlation beween lagged UI benefits and corporate leverage ratio
 
 ## Identification Analysis
 
@@ -235,7 +235,7 @@ If poor, unobserved economic conditions cause firms to increase leverage and ind
 
 ### (5) Profits
 
-No signs of poor operating performance when benefits increase
+Max UI benefits does not significantly affect profits (ROA)
 
 ![](am13_8.PNG)
 
@@ -253,12 +253,6 @@ If firm's operations are concentrated at firm HQ, generosity of UI in neighborin
 ![](am13_9.PNG)
 
 
-## Identification Analysis
-
-### Extended Benefits
-
-- Extended benefits excluded from analysis to minimize concern of ommitted variables. 
-
 
 
 ## Alternative Mechanisms
@@ -275,8 +269,42 @@ If firm's operations are concentrated at firm HQ, generosity of UI in neighborin
 
 
 
+## Estimating Indirect Costs of Financial Distress
+
+Want to measure full impact of unemployment risk on firm's financial decisions
+
+### Employment Changes around Default
+
+- Develop numerical estimates for present value of excess labor costs associated with leverage choices
+- Use default probabilities for each credit rating
+- Calculate labor cost required to compensate workers for expect loss if firm defaults
+- Need unemployment risk associated with financial distress - gather employment change data
+
+## Estimating Indirect Costs of Financial Distress
+
+### Costs and Benefits of Leverage
+
+- Use wage premium per dollar of assets
+    - Function of probability of default times per unit wage premium and labor expense divided by market value of assets and the sum of return on debt plus probability of default
+    
+- $\omega / A = (pv\Pi L/ A)/(r_d+p)$
 
 
+## Estimating Indirect Costs of Financial Distress
+
+![](am13_91.PNG)
+
+
+
+
+## Summary and Conclusion
+
+- Reductions in labor unemployment risk are associated with increases in corporate leverage 
+    - Exploit variation in unemployment insureance benefit levels
+- Average wage compensation for unemployment risk totals 60 basis points
+- Companies choose conservative financial policy to mitigate worker's exposure to unemployment risks
+    - Reducing leverage decreases probability that firm will encounter financial distress
+- Labor market frictions matter for corporate environment
 
 
 
