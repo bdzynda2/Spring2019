@@ -93,7 +93,7 @@ _Increasing generosity of state unemployment benefits lead to higher firm levera
 - Variation stems largely from maximum bounds and duration
 - Economic conditions also contribute to variation
 - Political forces also contribute
-- Managers may be more willing to layoff worers in times of generous UI
+- Managers may be more willing to layoff workers in times of generous UI
 
 
 ## Institutional Background
@@ -112,7 +112,9 @@ Then, changes in unemployment benefits make for a meaningful shock to the cost o
 
 - Collect data on state UI benefit laws and firm balance sheet characterisitcs
 - UI benefits from Dept of Labor 1950 - 2008
-- Generosity is measured as maximum benefit amount and duration alllowed
+- Generosity is measured as maximum benefit amount and duration alllowed 
+    - Aggregate realized value of UI benefits paid by states
+    - Obtained from BEA from 1969 to 2008
 
 ## Data
 
@@ -221,7 +223,7 @@ If poor, unobserved economic conditions cause firms to increase leverage and ind
 ### (4) Local Unobservable Economic Shocks
 
 - Separate firms who have higher intrastate commerce
-- Firms with higher out of state sales have greater relationship between UI generosity and leverage
+- Firms with higher in-state sales have greater relationship between UI generosity and leverage
 
 
 ## Identification Analysis
@@ -258,8 +260,13 @@ If firm's operations are concentrated at firm HQ, generosity of UI in neighborin
 ## Alternative Mechanisms
 
 ### Pure Cash Flow Effect
-- When UI benefits increase, firms' premium costs increase. Less money to pay debt, then, and leverage is increases
+- Maybe when UI benefits increase, firms' premiums increase as well. Then, firm must increase leverage to meet other obligations
 - Rejected by data (from identification analysis looking at profitability)
+- Although premium costs increase with UI benefits, workers demand less of a premium
+
+
+
+## Alternative Mechanisms
 
 ### Strategic Leverage
 - Greater UI benefits could lead to wage bargaining. Firms could raise leverage to maintain tougher bargining stance. 
@@ -271,23 +278,44 @@ If firm's operations are concentrated at firm HQ, generosity of UI in neighborin
 
 ## Estimating Indirect Costs of Financial Distress
 
+### Goal
 Want to measure full impact of unemployment risk on firm's financial decisions
-
-### Employment Changes around Default
-
-- Develop numerical estimates for present value of excess labor costs associated with leverage choices
-- Use default probabilities for each credit rating
-- Calculate labor cost required to compensate workers for expect loss if firm defaults
-- Need unemployment risk associated with financial distress - gather employment change data
 
 ## Estimating Indirect Costs of Financial Distress
 
-### Costs and Benefits of Leverage
+### Constructing Measure
+
+- Use default probability for credit ratings Altman (2007). 
+- Use Topel's (1984) wage premium paid per unit of unemployment risk 
+- Add to each credit rating probability of being laid off conditional on default
+    - Proxy for unemployment risk associated with financial distress
+
+
+## Estimating Indirect Costs of Financial Distress
+
+### Results
+
+- 283 defaulting firms experience 27% decrease in employees in two year window around default
+- Half of that decrease occurs one year before default
+- Robust to using matched sample of firms to ensure no underlying states of economic distress
+
+## Estimating Indirect Costs of Financial Distress
+
+### Compensating Wage Premium
 
 - Use wage premium per dollar of assets
     - Function of probability of default times per unit wage premium and labor expense divided by market value of assets and the sum of return on debt plus probability of default
     
 - $\omega / A = (pv\Pi L/ A)/(r_d+p)$
+
+
+## Estimating Indirect Costs of Financial Distress
+
+### Results
+
+- AA firm has no large wage premium
+- BBB firm with leverage ratio of 0.33 requires 57 basis points of firm value in additional wages with UI and 154 without UI!
+- Wage premiums for unemployment risk constitute substantial indirect costs of increasing financial leverage
 
 
 ## Estimating Indirect Costs of Financial Distress

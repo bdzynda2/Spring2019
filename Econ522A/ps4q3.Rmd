@@ -1,0 +1,127 @@
+---
+title: 'PS #4 - Question 3'
+output: pdf_document
+ 
+---
+```{r}
+set.seed(1234)
+N = 1000 # sample size
+```
+
+(a)
+data generating:
+
+```{r}
+x1 <- rnorm(N)
+x2 <- rnorm(N, 0,5)
+epsilon <- rnorm(N)
+
+y = 1 + x1 + x2 + epsilon
+```
+
+OLS regression:
+
+```{r}
+fit <- lm(y ~ x1 + x2)
+fit$coefficients
+```
+
+(b)
+
+residuals and regressors are orthogonal. 
+
+```{r}
+sum(fit$residuals)
+```
+
+```{r}
+x1 %*% fit$residuals
+```
+
+```{r}
+x2 %*% fit$residuals
+```
+
+(c)
+true residuals are not orthogonal with residuals.
+
+```{r}
+sum(epsilon)
+```
+
+```{r}
+x1 %*% epsilon
+```
+
+```{r}
+x2 %*% epsilon
+```
+
+(d)
+auxiliary regression:
+
+```{r}
+fit_aux = lm(x1 ~ x2)
+fit_aux$coefficients
+```
+
+```{r}
+fit2 = lm(y ~ fit_aux$residuals + 0)
+fit2$coefficients
+```
+
+## T-stat
+
+```{r}
+
+
+sigma_hat = sum(sqrt(fit$residuals ** 2)) / (N-3)
+
+
+
+# Auxiliary Regression of regressing X1 on constant and X2
+
+x0 = matrix(rep(1, N), nrow = N)
+
+X = matrix(cbind(x0, x1, x2), ncol=3)
+beta = fit$coefficients
+
+gamma_hat = solve(t(X[,c(1,3)]) %*% X[,c(1,3)]) %*% (t(X[,c(1,3)]) %*% y)
+v1_hat = X[,2] - X[,c(1,3)] %*% gamma_hat
+
+
+denom = sqrt(sigma_hat **2 / (t(v1_hat) %*% v1_hat))
+numer = beta[2] - 0
+
+numer / denom
+
+
+sqrt(diag(sigma_hat ** 2 / (t(X) %*% X)))
+```
+
+
+
+
+## Look at ith effect
+
+```{r} 
+i = 2
+y_i = matrix(y, nrow=N)
+y_i = y_i[-i,]
+X_i = X
+X_i <- X_i[-i,]
+
+x1_i = x1[-i]
+x2_i = x2[-i]
+
+model_no_i = lm(y_i ~ x1_i + x2_i)
+model_no_i$coefficients
+model_no_i$coefficients - beta
+
+# Plots below will show most influential data points
+plot(fit)
+```
+
+
+
+

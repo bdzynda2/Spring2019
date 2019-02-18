@@ -4,7 +4,7 @@ author: "Petkova and Zhang JFE 2005"
 date: "February 8, 2019"
 output: 
   beamer_presentation:
-    theme: "Berkeley"
+    theme: "Antibes"
     colortheme: "beaver"
     fonttheme: "structurebold"
 ---
@@ -15,7 +15,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Introduction
 
-### Big Question: Does risk affect the value premium and if so, how?
+### Big Question: 
+Does risk affect the value premium and if so, how?
 
 
 ## Introduction
@@ -47,9 +48,7 @@ knitr::opts_chunk$set(echo = FALSE)
 - Find time-varying risk goes in right direction explaining value premium
 - Value (growth) betas covary positively (negatively) with expected market risk premium
 
-### Result
 
-- Value minus growth betas tend to covary positively with expected market risk premium
 
 ## Introduction
 
@@ -59,6 +58,8 @@ knitr::opts_chunk$set(echo = FALSE)
 - Should use precise measures like:
     - term spread
     - short-term interest rate
+    - dividend yield
+    - default spread
 - Ex post and ex ante returns are positively correlated - good states ex post are bad ex ante
 
 
@@ -76,8 +77,12 @@ Covariation between value-minus-growth beta and expected market risk premium too
 
 ### Two Methods
 
-(1) Sorting 
-(2) Beta-Premium Regression (Conditional CAPM)
+Use sorting and conditional CAPM to compare:
+
+(1) Rolling Beta
+(2) Fitted Beta
+
+Against different states of the world and covariance with expected market risk premium
 
 
 
@@ -87,7 +92,7 @@ Covariation between value-minus-growth beta and expected market risk premium too
 
 ## Sorting
 
-Theory suggests that expected market risk premium is countercyclical
+Theory suggests that expected market risk premium is countercyclical. Compare average conditional value and growth betas in these states:
 
 ### States of the World
 
@@ -151,7 +156,7 @@ where $r_{it+1}$ is portfolio $i$'s excess return.
 Conditional beta:
 
 $$\beta_{it} \equiv Cov_t[r_{it+1}, r_{mt+1}] / Var_t[r_{mt+1}]$$
-Define $\gamma_t$ as the expected market risk premium. Both $\beta_{it}$ and $\gamma_t$ are conditional on the information st at time $t$. Then, the conditional CAPM says: $\mathbb{E}[r_{it+1}] = \gamma_t \beta_{it}$.
+Define $\gamma_t$ as the expected market risk premium. Both $\beta_{it}$ and $\gamma_t$ are conditional on the information set at time $t$. Then, the conditional CAPM says: $\mathbb{E}[r_{it+1}] = \gamma_t \beta_{it}$.
 
 ## Conditional CAPM
 
@@ -161,10 +166,13 @@ $$\mathbb{E}[r_{it+1}] = \bar \gamma \bar \beta_i + Cov[\gamma_t, \beta_{it}] = 
 
 Where $\varphi_i \equiv Cov[\beta_{it}, \gamma_t] / Var[\gamma_t]$ known as the __beta-premium sensitivity__. 
 
-### Beta-premium Sensitivity
+
+
+
+
+## Beta-premium Sensitivity
 
 - This sensitivity measures the instability of an asset's beta over the business cycle. 
-- Stocks with positive beta-premium sensitivities have high risk precisely during the recessionary periods when investors dislike risk or when price of risk is high
 - Stocks with positive $\varphi$ have high risk during recessionary periods when investors dislike risk or when risk is high
     - These stocks earn higher average returns than stocks with low or negative $\varphi$
 - _Effect of time-varying beta entirely captured by beta-premium sensitivity_
@@ -193,13 +201,13 @@ $$\hat \beta_{it} = c_i + \varphi_i \hat \gamma_t + \eta_{it}$$
 
 Therefore, simultaneous estimation via GMM is done with a vector of instrumental variables:
 
-$$\textbf{Z}_t = [\textbf{1}, DIV_tDEF_tTERMtTB_t]$$
+$$\textbf{Z}_t = [\textbf{1}, DIV_tDEF_tTERM_tTB_t]$$
 Use moment conditions:
 
 $$\mathbb{E}[(r_{mt+1} - \textbf{Z}_t \delta) \textbf{Z}_t'] = 0$$
 $$\mathbb{E}[(\hat \beta_{it} - c_i - \varphi_i \textbf{Z}_t \delta)(\textbf{1} \textbf{Z}_t \delta)'] =0 $$
 
-
+## Estimation
 ### 
 Failing to reject null here suggests value exposes investors to greater downside risk, but does not explain whether conditional CAPM can explain anomaly. Then, to test stronger restriction, look at whether intercepts of value-minus-growth portfolios equal 0
 
@@ -207,9 +215,9 @@ Failing to reject null here suggests value exposes investors to greater downside
 
 
 
-## Empirical Results
+## Data
 
-### Data
+### 
 
 - Dividend Yield is sum of dividend accruing to CRSP VW market port. over previous 12 months divided by level of market index
 - Default Premium is yield spread between Moody's Baa and Aaa
@@ -239,7 +247,7 @@ Use (2) since value anomaly is strongest in the smallest quintile.
 ## Data
 
 - Denote value premium as average returns/unconditional alphas of value-minus-growth portfolios. 
-- Value prefmium exists in the long run, especially among small stocks
+- Value premium exists in the long run, especially among small stocks
 - Excluding Great Depression increases unconditional alpha, but not necessarily avg returns
 - Post war period (after 1946) increases alpha of HML but decreases for HMLs, with lower average returns for both
 
@@ -292,7 +300,7 @@ Value Portfolios have positive, but growth portfolios have negative beta-premium
 
 ## Results
 
-Exluding Great Depression drastically affects small growth stocks
+Excluding Great Depression drastically affects small growth stocks
 ![Panel B results: Exclude Great Depression](pres_pics/pz05_3.PNG)
 
 - Not quite known why small growth stocks are affected so much
@@ -322,21 +330,28 @@ Time-varying risk in sample is similar, though weaker, than post-depression
 
 ![](pres_pics/pz05_5.PNG)
 
+## Implications
 
+### Previous Work
 
-## Summary
+- Replicate DeBondt and Thaler (1987) 
+- Results no longer hold for time-varying beta
 
-###
+## Conclusion
+
+### Summary
 
 - Time-varying risk goes in the right way to explain the value premium
 - Value betas tend to covary positively with expeted market risk premium
-- Casts doubt on claim that value cannot be riskier than growth
+- Casts doubt on claim that value cannot be riskier than growth (Behavioral Account)
 - Suggests it is true that value firms cannot scale down in bad times, but are more flexible in good times
 
 
 
+### Extensions
 
-
+- Conduct simulations - choose certain known parameter values (value premium) and test all implications 
+- Hard to say what is normal - partitioning data
 
 
 
