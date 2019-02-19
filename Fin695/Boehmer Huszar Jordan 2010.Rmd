@@ -62,12 +62,17 @@ Is the _absense_ of short selling informative about future returns?
 
 ### Short Interest Ratio
 
-- Monthly snapshot of percentage of shares outstanding sold short (maybe justify)
+- Monthly snapshot of percentage of shares outstanding sold short 
+    - Some contradictory claims regarding SIR
+    - Many studies affirm high SIR is associated with negative returns and under performance
 - Data from June 1988 to December 2005 on NYSE, Amex, and Nasdaq
+
+
+## Data
 
 ### Other
 - CRSP monthly returns, trading volumes, shares outstanding and end-of-month prices
-- Compustat financia lifnormation from annual industrial files
+- Compustat financial information from annual industrial files
 - Common stock, listed for at least one year
 
 
@@ -82,12 +87,18 @@ Is the _absense_ of short selling informative about future returns?
 - 9,985 from Amex
 - Avg of 4,400 firms per month
 
+## Data
 
+### SIR Measures
+
+(1) Aggregate number of shorted shares
+(2) Aggregate short interest ratio (aggregate shorting as percentage of total shares outstanding)
+(3) Median days-to-cover ratio (SIR divided by share turnover)
 
 
 ## Data
 
-![Time-Series Maret aggregate shorted shares, SIR, and median days-to-cover ratio](pres_pics/boe10_1.PNG)
+![Time-Series market aggregate shorted shares, SIR, and median days-to-cover ratio](pres_pics/boe10_1.PNG)
 
 
 
@@ -102,10 +113,10 @@ Is the _absense_ of short selling informative about future returns?
 
 ## Method
 
-- Test for abnormal returns during calendard month following WSJ publications of SIR data
+- Test for abnormal returns during calendar month following WSJ publications of SIR data
 - Create portfolios of lightly and heavily shorted stocks
     - 99th, 95th, 90th, 10th, 5th, 1st percentiles for SIR
-- Use Fama-French-Cahart Four Factor model to test for abnormal returns for portfolios
+- Use Fama-French-Carhart Four Factor model to test for abnormal returns for portfolios
 - Use both equal and value weighted portfolios
 
 
@@ -119,6 +130,7 @@ Is the _absense_ of short selling informative about future returns?
 - Large, significant positive abnormal returns for lightly shorted stock portfolio
 - Lightly shorted portfolio contains small cap value stocks
 - Long/short portfolio has positive returns and negative beta
+- Equal weighted has stronger results than value weighted portfolio
 
 
 
@@ -168,7 +180,7 @@ Is the _absense_ of short selling informative about future returns?
 ### Details
 
 - NYSE-Amex Equal Weighted
-    - Lightly shorted stocs have sig. positive excess returns 0.4% per month for SIR 5% and 10%
+    - Lightly shorted stocks have sig. positive excess returns 0.4% per month for SIR 5% and 10%
     - SIR 1% is not significant
     - 1% minus 99% is significant with 2.1% excess return and beta -0.659
 - NYSE-Amex Value Weighted
@@ -248,12 +260,12 @@ Concerning size, breakpoints in construction of SMB may be of issue. All smaller
 For three smaller size quartiles:
  
 - Large abnormal returns for low SIR stocks in higher turnover groups
-- returns in low SIR and larger than returns on high SIR portolios across all turnover quantiles
+- returns in low SIR and larger than returns on high SIR portfolios across all turnover quantiles
 
 For large size quartile:
 
 - weaker results across the board, but still significant results
-- portfolio with long high turnover, low SIR, and short hight turnover, high SIR has 1.9% monthly return
+- portfolio with long high turnover, low SIR, and short high turnover, high SIR has 1.9% monthly return
 
 
 
@@ -273,7 +285,7 @@ Overall, results most pronounced in smaller stocks
 For Nasdaq only stocks:
 
 - Most shorted portfolios tend not to have significant abnormal returns
-- Least shorted portfolios have significant postive returns for all but one portfolio
+- Least shorted portfolios have significant positive returns for all but one portfolio
     - Smallest, highest turnover have highest returns
     
 ## Results
@@ -305,7 +317,7 @@ For Nasdaq only stocks:
 
 ## Robustness
 
-- Positive information in low short interest stock could preceed the short interest
+- Positive information in low short interest stock could precede the short interest
 - Look at large decrease in short interest (25%) across three months for each stock
 - Level of short interest is persistent
 - Conclusions unaffected by excluding stocks with larger changes in SIR
@@ -318,10 +330,10 @@ For Nasdaq only stocks:
 ## Summary and Extensions
 
 - Short sellers can not only identify overvalued stocks but undervalued ones too
-- Stocs are highly traded (high turnover) despite being small, so constraints don't appear problematic
+- Stocks are highly traded (high turnover) despite being small, so constraints don't appear problematic
 - Does the act of focusing on losers necessarily bring the ability to identify winners? 
     - Why don't short sellers arbitrage this away? 
-    
+- Repeat study with longer time period, Recession included
 
 
 
