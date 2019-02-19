@@ -61,7 +61,7 @@ $$S_t = S_{t-4} + Z_t \implies S_t - S_{t-4} = Z_t$$
 With $W_t$ and $Z_t$ being uncorrelated white noise processes. 
 
 
-_Question:_ Why is seasonality important to consider?
+__Question:__ Why is seasonality important to consider?
 
 
 
@@ -74,7 +74,7 @@ _What explains the post-earnings announcement drift?_
 
 ## Background
 
-- Paper investigates possibility that stock prices fai to relfect the full implications of future earings
+- Paper investigates possibility that stock prices fail to relfect the full implications of future earings
 - Prices do not adequately reflect the extent to which earnings deviate from a seasonal random walk model
 - Perhaps reactions of prices to future earnings are predictable
 
@@ -97,11 +97,27 @@ __Contribution__
 
 _The nature of the evidence is also distinct in an important way from that in the growing body of other studies that question semi-strong or weak-form market efficiency. Previous studies make vague predictions. By linking what appears to be the elimination of descrepancy between prices and fundamentals to prespecified information events, this study gives evidence that a market-efficiency anomaly is rooted in a failure of information to flow completely into price_
 
+__Question:__ Does this paper assume market efficiency or inefficiency?
+
+## Development
+
+_Table 1_ shows the time-series behavior frequently demonstrated by many studies: First 3 autocorrelations are positive, though diminishing, and the fourth is negative. 
+
+
+Consider the behavior of stock prices in a market where earnngs expectations fail to reflect the pattern described in Table 1. Use a seasonal random walk with trend. 
 
 __Equation 1__:
 $$\mathbb{E}^M[Q_t] = \delta + Q_{t-4}$$
 
+Together with an earnings response coefficient $\lambda$, we have abnormal return described by:
 
+__Equation 2__:
+$$AR_t = \lambda(Q_t - \mathbb{E}^M[Q_t]) = \lambda ( Q_t - Q_{t-4} - \delta)$$
+The abnormal retrun reflects a compnent equal to the current detrended seasonal difference in earnings. 
+
+__Hypothesis 1:__ _If the prices reflect an earnings expectation described by a seasonal random walk with trend, there should be positive but declining associations between the abnormal return at the announcement of quarter t eachings and the detrended seasonal differences in earnings for quarters t-1, t-2, and t-3. There should be a negative association between the abnormal return at the announcement of quarter t eachings and the detrended seasonal difference in earnings for quarter t-4._
+
+__Question:__ What is the difference between the two models Hypothesis 1 is comparing?
 
 
 
