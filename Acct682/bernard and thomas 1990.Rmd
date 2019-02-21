@@ -44,7 +44,7 @@ lines(x, col=4); abline(h=0, col=4, lty=2); abline(a=0, b=.2, lty=2)
 ```
 
 
-__Question:__ Why is inclusion of a drift a good specification for the context of earnings models such as the one in this paper?
+__Question:__ Why is inclusion of a trend or drift a good specification for the context of earnings models such as the one in this paper?
 
 
 ## Seasonality
@@ -76,7 +76,7 @@ _What explains the post-earnings announcement drift?_
 
 ## Background
 
-- Paper investigates possibility that stock prices fail to relfect the full implications of future earings
+- Paper investigates possibility that stock prices fail to reflect the full implications of future earnings
 - Prices do not adequately reflect the extent to which earnings deviate from a seasonal random walk model
 - Perhaps reactions of prices to future earnings are predictable
 
@@ -93,14 +93,15 @@ __Key Findings:__
 
 __Contribution__
 
-(1) Gives signs and magnitudes of reactions to subsequent earnings announcements to the historical autocorrelation stucture of earnings (could help sort out cause of post-announcement drift)
+(1) Gives signs and magnitudes of reactions to subsequent earnings announcements to the historical autocorrelation structure of earnings (could help sort out cause of post-announcement drift)
 (2) Evidence given in this paper creates added obstacles to contentions that drift might ultimately be explained by errors in the methodology used to estimate expected returns
 
 
->The nature of the evidence is also distinct in an important way from that in the growing body of other studies that question semi-strong or weak-form market efficiency. Previous studies make vague predictions. By linking what appears to be the elimination of descrepancy between prices and fundamentals to prespecified information events, this study gives evidence that a market-efficiency anomaly is rooted in a failure of information to flow completely into price. Even in a maret where prices fail to reflect all available information, one can still observe unusual stock-price activity concentrated around news releases. The puzzling question is, if a portion of the news became predictable months earlier, why did the associated price movements not occur then?(308)
+>_The nature of the evidence is also distinct in an important way from that in the growing body of other studies that question semi-strong or weak-form market efficiency. Previous studies make vague predictions. By linking what appears to be the elimination of descrepancy between prices and fundamentals to prespecified information events, this study gives evidence that a market-efficiency anomaly is rooted in a failure of information to flow completely into price. Even in a maret where prices fail to reflect all available information, one can still observe unusual stock-price activity concentrated around news releases. The puzzling question is, if a portion of the news became predictable months earlier, why did the associated price movements not occur then?_(308)
 
 __Question:__ Does this paper assume market efficiency or inefficiency?
 
+__Question:__ The authors above use the word predictable. Another session's paper discusses Granger Causality. Methodologically, how much should we value simply predictable to causal? 
 
 SP Kothari writes:
 
@@ -119,7 +120,7 @@ __Definition:__ A key measure is _standardized unexpected earnings_ defined as a
 _Table 1_ shows the time-series behavior frequently demonstrated by many studies: First 3 autocorrelations are positive, though diminishing, and the fourth is negative. 
 
 
-Consider the behavior of stock prices in a market where earnngs expectations fail to reflect the pattern described in Table 1. Use a seasonal random walk with trend. 
+Consider the behavior of stock prices in a market where earnings expectations fail to reflect the pattern described in Table 1. Use a seasonal random walk with trend. 
 
 __Equation 1__:
 $$\mathbb{E}^M[Q_t] = \delta + Q_{t-4}$$
@@ -130,7 +131,7 @@ __Equation 2__:
 
 $$AR_t = \lambda(Q_t - \mathbb{E}^M[Q_t]) = \lambda ( Q_t - Q_{t-4} - \delta)$$
 
-The abnormal retrun reflects a compnent equal to the current detrended seasonal difference in earnings. 
+The abnormal return reflects a component equal to the current detrended seasonal difference in earnings. 
 
 __Hypothesis 1:__ _If the prices reflect an earnings expectation described by a seasonal random walk with trend, there should be positive but declining associations between the abnormal return at the announcement of quarter t eachings and the detrended seasonal differences in earnings for quarters t-1, t-2, and t-3. There should be a negative association between the abnormal return at the announcement of quarter t eachings and the detrended seasonal difference in earnings for quarter t-4._
 
@@ -139,13 +140,13 @@ __Hypothesis 1:__ _If the prices reflect an earnings expectation described by a 
 
 ## Empirical Test of Hypothesis 1
 
-__Claim:__ If Hypothesis 1 is correct, then we should observe a positive relation for each of the next three announcements but with the magnitude of the assoication decling over the three quarters and a negative relation for the fourth subsequent announcement. 
+__Claim:__ If Hypothesis 1 is correct, then we should observe a positive relation for each of the next three announcements but with the magnitude of the association decline over the three quarters and a negative relation for the fourth subsequent announcement. 
 
 __Test:__ Form portfolios that are long in extreme good news (SUE = 10) and short in bad news (SUE = 1) based on quarter $t$ earnings information. Measure mean abnormal returns for portfolios around subsequent earnings announcements. 
 
 __Question:__ Why are two t-tests presented in _Table 2_? Why is one smaller than the other?
 
-__Result:__ Three-day abnormal returns around earnings announcements are predictableas seen in Panel A of _Table 2_. Signs and magnitudes lend support of Hypothesis 1. 
+__Result:__ Three-day abnormal returns around earnings announcements are predictable as seen in Panel A of _Table 2_. Signs and magnitudes lend support of Hypothesis 1. 
 
 
 __Question:__ What question is Panel B of _Table 2_ trying to answer? What is the result? (page 319 to 320)
@@ -153,7 +154,7 @@ __Question:__ What question is Panel B of _Table 2_ trying to answer? What is th
 
 __Test:__ Is the result driven by extreme deciles? Use correlations. 
 
-__Result:__ Panel C shows relation between SUE deciles for quater $t$ and corresponding mean abnormal returns around next four announcements is monotonic and almost linear. 
+__Result:__ Panel C shows relation between SUE deciles for quarter $t$ and corresponding mean abnormal returns around next four announcements is monotonic and almost linear. 
 
 
 
@@ -162,7 +163,7 @@ __Question:__ How could firm size be driving the results? (321)
 __Question:__ Are patterns exhibited in _Table 2_ similar to those in _Table 4_? Which size firm are results the strongest?
 
 
-__Claim:__ Data are consistent with stock prices faiing to reflect fully the implications of current earnings for future earnings for all firms, but the faiure is more apparent for small stocks. 
+__Claim:__ Data are consistent with stock prices failing to reflect fully the implications of current earnings for future earnings for all firms, but the failure is more apparent for small stocks. 
 
 
 
@@ -197,7 +198,7 @@ Estimate regressions of following form:
 $$AR_{jt} = b_0 + b_1(Q_{j,t-1} - Q_{j,t-5}) + b_4e_{j, t-4} + u_{jt}$$
 $$AR_{jt} = b_0 + b_1 e_{j, t-1} + b_2 e_{j,t-2} + b_3 e_{j, t-3} + b_4 e_{j, t-4} + v_{jt}$$
 
-__Note:__ Sample is too short to iteratively estimate the time series model here. To deal with this, they first partition the data into a subset of 26 historical observations, and they also use the full sample but subsitute forecast errors from alternative Foster model. This weakens the test. 
+__Note:__ Sample is too short to iteratively estimate the time series model here. To deal with this, they first partition the data into a subset of 26 historical observations, and they also use the full sample but substitute forecast errors from alternative Foster model. This weakens the test. 
 
 
 ![Table 5](682_markdown_pics/bt_1.PNG)
@@ -211,7 +212,7 @@ This holds true for firm size categories as well.
 
 ## Other Considerations (page 331)
 
-(1) _Can this evidence be explained in terms of rational investors desire to await confirmation that a previous earnings change is not transitory?_ No, not consistent with quater $t+4$. 
+(1) _Can this evidence be explained in terms of rational investors desire to await confirmation that a previous earnings change is not transitory?_ No, not consistent with quarter $t+4$. 
 
 (2) _Does the evidence reflect autocorrelations in earnings that were observable ex post, but not predictable ex ante?_ No, how could it not get it right year after year?
 
@@ -231,7 +232,7 @@ This holds true for firm size categories as well.
 
 
 
-
+![](682_markdown_pics/bt_2.PNG)
 
 
 
