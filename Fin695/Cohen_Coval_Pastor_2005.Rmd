@@ -257,9 +257,137 @@ Then, goal will be to estimate:
 
 
 
-## Simulations - Result
+## Simulations - Results
+
 ### Table 1
 ![Table 1](pres_pics/ccp05-8.PNG)\
+
+
+
+## Simulations - Results 
+
+- Generally, new measures have higher rank-order correlations
+- Population means outperform $\alpha$. 
+- New measures do well in short return histories
+
+- Also, new measures have higher correlation with population $\alpha$ (next table)
+- Mean-Squared Error is low for new measures in short horizon
+
+## Simulations - Results
+
+### Table II 
+![Table 1](pres_pics/ccp05-9.PNG)\
+
+
+
+
+
+
+## Simulations - Results
+
+### Table II
+![Table 1](pres_pics/ccp05-91.PNG)\
+
+
+
+
+## Simulations - Results
+
+### Figure 1
+
+![](pres_pics/ccp05-92.PNG)\
+
+
+
+
+
+## Empirical Analysis
+
+### Data
+
+- CRSP mutual fund data (returns net of fees)
+- Add fees back in with annual expense ratio
+- Spectrum Data from Thomson Financial on WRDS
+    - Allows for access to holding reports
+    - merge with CRSP via _hand matching_
+- Quarterly Data
+- April 1982 - September 2002
+
+
+## Empirical Analysis
+
+### Steps
+
+(1) Compute traditional alpha $\hat \alpha$
+(2) Using $\hat \alpha$ as reference, compute $\hat \delta^*$ and $\hat \delta^{**}$
+(3) Compute nine versions of each measure - with three benchmark models and three lookback periods. 
+(4) Sort funds into decile portfolios at the beginning of each quarter, equal weighting. 
+
+
+
+
+## Empirical Analysis Results
+
+- All three measures capable of predicting future returns
+- Persistence in performance weakins when momentum benchmark is included
+- Most predictive power acheived with $\hat \delta^*$
+
+
+## Empirical Analysis
+
+### Table 3
+
+![](pres_pics/ccp05-93.PNG)\
+
+
+
+
+
+
+
+## Empirical Analysis
+
+### New info not contained in $\alpha$?
+
+- Perform conditional sorts into quintiles based on $\hat \alpha$ and then $\hat \delta^*$. 
+- Look cheifly at average of portfolios that buy funds with high $\hat \delta^*$ and shorts low $\hat \delta^*$ within a given $\hat \alpha$ quintile
+- Appears that there is info contained in $\hat \delta^*$ not in $\hat \alpha$. 
+
+
+
+## Empirical Analysis
+
+### Table IV
+![](pres_pics/ccp05-94.PNG)\
+
+
+
+## Empirical Analysis
+
+### Useful to Investors?
+
+- Examine "feasible" portfolio strategies. 
+- Holdings info available to investors comes with a lag
+- Form measures on lagged data, using $t$ to predict returns in $t+4$ through $t+6$
+    - Normally $t+1$ through $t+3$
+- Do double sorts again
+- Measures are still helpful, even with lag
+
+
+
+
+## Empirical Analysis
+
+### Table IX
+![](pres_pics/ccp05-95.PNG)\
+
+
+
+
+
+
+
+
 
 
 
