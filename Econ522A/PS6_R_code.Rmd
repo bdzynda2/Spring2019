@@ -1,0 +1,270 @@
+---
+title: "PS 6 R Code"
+author: "David Zynda"
+date: "February 23, 2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+
+
+## Problem 1
+
+__Write an R code to implement the following:__
+
+
+(a) Generate 5 i.i.d obs from the uniform random variable on $[-0.5, 0.5]$ and compute the sample average. 
+
+```{r}
+set.seed(1234)
+obs = runif(5, -0.5, 0.5)
+mean(obs)
+
+```
+
+(b) Repeat the above 1000 times, using new observations each time
+
+
+```{r}
+
+N = 1000
+mean_obs = rep(0, N)
+
+for(i in 1:N){
+  mean_obs[i] = mean(runif(5, -0.5, 0.5))
+}
+
+```
+
+
+
+(c) Draw Histogram
+
+```{r}
+hist(mean_obs, xlim = c(-0.5, 0.5), ylim = c(0, 300))
+
+```
+
+
+
+
+(d) Do parts (a) through (c) now with 20 observations from the same random variable
+
+```{r}
+
+N = 1000
+M = 20
+
+obs = runif(M, -0.5, 0.5)
+mean(obs)
+
+mean_obs = rep(0, N)
+
+for(i in 1:N){
+  mean_obs[i] = mean(runif(M, -0.5, 0.5))
+}
+
+hist(mean_obs, xlim = c(-0.5, 0.5), ylim = c(0, 300))
+```
+
+(e) Do it now with 80 obs
+
+```{r}
+
+N = 1000
+M = 80
+
+obs = runif(M, -0.5, 0.5)
+mean(obs)
+
+mean_obs = rep(0, N)
+
+for(i in 1:N){
+  mean_obs[i] = mean(runif(M, -0.5, 0.5))
+}
+
+
+hist(mean_obs, xlim = c(-0.5, 0.5), ylim = c(0, 300))
+
+
+```
+
+
+
+
+(f) When you draw the histograms to scale, what do you see? Explain what you observe using the LLN. 
+
+The distribution tightens and begins to converge as sample size increases. 
+
+
+
+
+## Problem 2
+
+__Write out code to implement the follows:__
+
+
+(a) Generate 5 i.i.d. observations from the uniform random variable on [-0.5, 0.5] and compute the sample average. 
+
+
+```{r}
+dat_gen <- function(N, M){
+  # Let N be mean sample size, M be obs
+  obs = runif(M, -0.5, 0.5)
+
+  mean_obs = rep(0, N)
+
+  for(i in 1:N){
+    mean_obs[i] = mean(runif(M, -0.5, 0.5))
+  }
+  return(mean_obs)
+}
+
+
+dat_gen(1, 5)
+
+```
+
+(b) Repeat (a) 1000 times, using new observations each time
+
+
+```{r}
+mydata <- dat_gen(1000, 5)
+
+```
+
+(c) Historgram of 1000 averages times sqrt of 5
+
+```{r}
+
+mydata_sqrtM = mydata * sqrt(5)
+hist(mydata_sqrtM, xlim = c(-1, 1), ylim = c(0, 300))
+
+```
+
+(d) Do (a) - (c) using 20 obs and multiply by sqrt 20
+```{r}
+mydata = dat_gen(1000, 20)
+mydata_sqrtM = mydata * sqrt(20)
+hist(mydata_sqrtM, xlim = c(-1, 1), ylim = c(0, 300))
+
+```
+
+
+(e) Do (a) - (c) using 20 obs and multiply by sqrt 20
+```{r}
+mydata = dat_gen(1000, 80)
+mydata_sqrtM = mydata * sqrt(80)
+hist(mydata_sqrtM, xlim = c(-1, 1), ylim = c(0, 300))
+
+```
+
+
+
+
+
+(f) What do you see?
+
+It appears that the images are becoming more symmetric. 
+
+
+
+
+
+## Problem 5
+
+(a) Generate 100 iid data from the model in the statement and regress $y_i$ on the constant term $x_i$ and $z_i$ to verify that there is the attenuation bias. State a way you can simulate data to verify the direction of inconsistency proved in class
+
+
+```{r}
+library(MASS)
+
+# Generate data
+r = 0
+varcov = matrix(c(1,r,0, r,1,0, 0,0,1), nrow = 3, ncol = 3)
+mus = matrix(c(rep(0,3)), nrow = 3)
+
+regressors = mvrnorm(100, mus, varcov)
+x_star = regressors[,1]
+z_i = regressors[,2]
+
+y = rep(0,100)
+y = 1 + x_star + z_i + regressors[,3]
+
+v = rnorm(100, 0, 1)
+x_i = regressors[,1] + v
+
+
+# Regress yi on constant term, xi (not xi*) and zi
+
+my_lm = lm(y ~ x_i + z_i)
+summary(my_lm)
+
+```
+
+
+As can be seen from the summary generated above, $x_i$ is underestimated - negatively biased. 
+
+
+
+(b) What will happen to size of inconsistency if $\sigma_v^2$ increases? Verify with $\sigma_v^2 = 2$
+
+```{r}
+# Generate data
+r = 0
+varcov = matrix(c(1,r,0, r,1,0, 0,0,1), nrow = 3, ncol = 3)
+mus = matrix(c(rep(0,3)), nrow = 3)
+
+regressors = mvrnorm(100, mus, varcov)
+x_star = regressors[,1]
+z_i = regressors[,2]
+
+y = rep(0,100)
+y = 1 + x_star + z_i + regressors[,3]
+
+v = rnorm(100, 0, sqrt(2))
+x_i = regressors[,1] + v
+
+
+# Regress yi on constant term, xi (not xi*) and zi
+
+my_lm = lm(y ~ x_i + z_i)
+summary(my_lm)
+
+```
+
+As variance increases, the slope becomes more negatively biased. 
+
+
+(c) What will happen if $\rho$ increases? Verify this by simulating with $\rho = 0.5$
+
+
+```{r}
+r = 0.5
+varcov = matrix(c(1,r,0, r,1,0, 0,0,1), nrow = 3, ncol = 3)
+mus = matrix(c(rep(0,3)), nrow = 3)
+
+regressors = mvrnorm(100, mus, varcov)
+x_star = regressors[,1]
+z_i = regressors[,2]
+
+y = rep(0,100)
+y = 1 + x_star + z_i + regressors[,3]
+
+v = rnorm(100, 0, 1)
+x_i = regressors[,1] + v
+
+
+# Regress yi on constant term, xi (not xi*) and zi
+
+my_lm = lm(y ~ x_i + z_i)
+summary(my_lm)
+
+```
+
+It becomes more negatively biased
