@@ -44,7 +44,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - This paper's metric of a manger's skill is a weighted average of traditional skill measures across all managers where weights are covariances between the manager's current portfolio weights and the current weights of the other managers
 - Trade-based performance judges manager's skill by extent to which recent changes in his holding match those of managers with outstanding past performance. 
-    - weighted avg of traditional skill measures, but weights are covariance between concurrent changes in manager's portfolio weights and those of other managers
 - Evaluate mutual fund performance by pooling information across funds - instead of single history for single manager
 
 
@@ -57,6 +56,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 - Results come by way of simulations:
     - estimators produce higher rank correlations with true skill than standard estimators
+    - estimators more highly correlated with $\alpha$ than $\hat \alpha$
     - estimators perform best with high number of managers, small history
     
 
@@ -128,10 +128,6 @@ which measures manager's performance as the average quality of all stocks in man
 
 $$\hat \delta^* = \mathbf{Z} \hat \alpha$$
 
-- Additionally, $\bar{\hat{\delta}}^*_m = \bar{\hat{\alpha}}_m$
-    - That is, skill measure here has same info as usual measure about performance of mutual fund industry as a whole
-    - There will be gains to the skill measure, however. 
-    
 - If $\hat\alpha_m$'s are not perfectly correlated, $\hat \delta^*_m$ has a lower standard error. 
 
 
@@ -336,7 +332,7 @@ Then, goal will be to estimate:
 (1) Compute traditional alpha $\hat \alpha$
 (2) Using $\hat \alpha$ as reference, compute $\hat \delta^*$ and $\hat \delta^{**}$
 (3) Compute nine versions of each measure - with three benchmark models and three lookback periods. 
-(4) Sort funds into decile portfolios at the beginning of each quarter, equal weighting. 
+(4) Sort funds into decile portfolios according to each performance measure at the beginning of each quarter, equal weighting. 
 
 
 
@@ -399,6 +395,28 @@ Then, goal will be to estimate:
 
 
 
+## Epirical Analysis
+
+### Are Investors Aware?
+- Sort funds into quintiles by $\hat \alpha$ and then $\hat \delta^{*(*)}$ lagged by one quarter
+- Compute net fund inflow and then average annual net fund inflow (almost always statistically significant)
+- Authors find higher flows tracking $\hat \alpha$, but not their measures. (almost never significant)
+
+
+
+## Conclusion
+
+- Propose a new performance measure to exploit information contained in similiarity (or changes) of manager's holdings
+- Performance measures do well in simulation and historical testing
+- Performance measures contain info not found in $\hat \alpha$
+- Mutual Fund investors don't seem to be aware
+
+## Questions
+- Are bigger winning (losing) firms driving this? Do they have a high concentration of managers?
+
+- There are various portfolio strategies, how likely is it that big firms have matching strategies (if there GS and MS have value stock portfolios who win, does this drive the similarity in holdings?)
+
+- Are good managers always good managers? Are they limited to certain investment styles?
 
 
 
