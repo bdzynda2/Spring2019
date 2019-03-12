@@ -240,8 +240,12 @@ Previous modeling yielding average exposure over the sample. Would be interestin
 
 ## Hedge Fund Holdings around Stock Price Peaks 
 
+### Result
 - Greater holdings before price peak
 - Appears there was success in timing
+
+
+## Hedge Fund Holdings around Stock Price Peaks 
 
 ### Figure 5
 
@@ -251,8 +255,12 @@ Previous modeling yielding average exposure over the sample. Would be interestin
 
 ## Characteristic Adjusted Performance
 
+### Result
 - Recreate "copycat" hedge portfolios and compare them against benchmark portfolios 
 - Tech stocks held by hedge funds performed much better
+
+
+## Characteristic Adjusted Performance
 
 ### Figure 6
 
