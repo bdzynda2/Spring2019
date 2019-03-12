@@ -21,10 +21,10 @@ knitr::opts_chunk$set(echo = FALSE)
 
 Different views:
 
-- Stock prices increase when driven by irrational investor euphoria (Shiller 2000)
+- Stock prices increase when driven by irrational investor euphoria (Schiller 2000)
 - Efficient Market Hypothesis argues rational investors will exploit mispricing and correct it
 - Limits to Arbitrage suggest noise traders, agency problems, and synchronization risk may constrain arbitrageurs to correct mispricing. 
-- Rational investors ride the bubbles for a while and have destabalizing effect
+- Rational investors ride the bubbles for a while and have destabilizing effect
 
 
 
@@ -86,7 +86,7 @@ Different views:
 - Reporting entity is institution, not the fund
 - Check firm status as investment advisor with SEC
     - Signals non-hedge status: exclude
-- In Form ADV, require 50% of clientes are:
+- In Form ADV, require 50% of clients are:
     - Other pooled investment vehicles
     - high net worth individuals
 - Cuts managers down to 53
@@ -121,7 +121,7 @@ Different views:
 
 Could preferential IPO allocations explain?
 
-- Investors given shares of "hot" IPO's on first day of trading and selling them after (flipping)
+- Investors given shares of "hot" IPOs on first day of trading and selling them after (flipping)
 - In exchange, Investment Bank increases trading commissions
 - Could not see clearly in data
 - Separating newly listed items on CRSP in data do not appear to deviate from overall analysis
@@ -139,7 +139,7 @@ $$R_t = (b-g)R_{Mt} + g R_{Tt} + e_t$$
 
 ## Return Regressions
 
-Now, want to look at ratio of hedge fund lonng and short positions compared with the market. The net investment in techonology stocks as a proportion of the total portfolio is $(b-g)m_T + g$ and the net invesment in stocks overall is $b$. Then, the ratio is: 
+Now, want to look at ratio of hedge fund long and short positions compared with the market. The net investment in technology stocks as a proportion of the total portfolio is $(b-g)m_T + g$ and the net investment in stocks overall is $b$. Then, the ratio is: 
 
 
 $$w_T = m_T + \frac{g}{b}(1 - m_T)$$
@@ -192,8 +192,8 @@ Call $(R_{Tt} - R_{Mt})$ the $TECH$ factor.
 
 - Panel A shows largest hedge fund managers had positive exposure to $TECH$
     - Higher than Figure 2 (20% there vs 49% here) due to shorting
-- Panel B SHort-selling specialists are only ones to have negative $TECH$
-- Panel C reveals overweighted exposure is not limited to fifth P/S quintile
+- Panel B Short-selling specialists are only ones to have negative $TECH$
+- Panel C reveals over weighted exposure is not limited to fifth P/S quintile
 
 In short, accounting for short positions strengthens results - hedge funds offset market exposure, not technology exposure
 
@@ -204,7 +204,7 @@ In short, accounting for short positions strengthens results - hedge funds offse
 
 ## Return Regressions
 
-Previous modeling yielding average exposure over the sample. Would be interesting to look at model with time-varying coeffecients: 
+Previous modeling yielding average exposure over the sample. Would be interesting to look at model with time-varying coefficients: 
 
 ### Kalman Filter
 
@@ -221,9 +221,79 @@ Previous modeling yielding average exposure over the sample. Would be interestin
 
 
 
-## Portfolio Holdings of Individual Manager Fund Flows
+## Did Hedge Funds Time Their Exposure to Individual Stocks?
+
+- It appears hedge funds did ride the bubble
+    - But did they do so deliberately?
+- Hedge Funds did not exit tech stocks aggressively during the bubble
+    - Seems plausible that they were in it for the ride
+    
+    
+
+## Hedge Fund Holdings around Stock Price Peaks 
+
+- Look at price peaks of individual stocks
+- For each stock, get proportion of outstanding shares that is held by the hedge funds
+- Align quarterly series of hedge funds holdings in event time (price peak)
+- Take value-weighted average across high P/S Nasdaq stocks, other Nasdaq, and NYSE/AMEX stocks
 
 
 
+## Hedge Fund Holdings around Stock Price Peaks 
+
+- Greater holdings before price peak
+- Appears there was success in timing
+
+### Figure 5
+
+![](pres_pics/bn04_7.PNG)\
+
+
+
+## Characteristic Adjusted Performance
+
+- Recreate "copycat" hedge portfolios and compare them against benchmark portfolios 
+- Tech stocks held by hedge funds performed much better
+
+### Figure 6
+
+![](pres_pics/bn04_8.PNG)\
+
+
+
+## Characteristic Adjusted Performance
+
+### A more formal test
+
+Following Daniel (1997), Chen, Jegadeesh, and Wermers (2000):
+
+- Want to measure abnormal returns relative to benchmark returns
+- Sort all Nasdaq stocks into quintiles based on size
+- Subsort this group into P/S quintiles and then into past 6-month momentum quintiles. 
+- Repeat for NYSE/AMEX
+- Generates 125 portfolios for each exchange
+- Calculate abnormal return for each stock by subtracting return of its matched benchmark portfolio
+
+
+
+## Characteristic Adjusted Performance
+
+### Table IV
+
+![](pres_pics/bn04_9.PNG)\
+
+
+
+
+## Conclusion
+
+- Efficient Market Hypothesis says rational investors prevent price bubbles by trading against mispricing
+- This paper shows two points:
+    (1) Hedge Funds were riding technology bubble, not attacking it
+    (2) Hedge funds reduced holdings before prices collapsed - suggesting hedge funds knew these stocks were inflated. 
+- Suggests that Investor sentiment driving tech bubble was predictable to some extent
+
+- Hedge funds seem to be a much smaller pool - were there other rational investors who could fill the role?
+- Did hedge funds act similarly in other periods? Were there times they were wrong (a false bubble?)
 
 
