@@ -47,7 +47,7 @@ Different views:
 
 ## Data 
 
-## Defining the Bubble Segment
+### Defining the Bubble Segment
 
 - Look for stocks that were most likely to be overvalued during bubble
     - Use price to sales ratio
@@ -56,7 +56,7 @@ Different views:
 
 ## Data 
 
-## Defining the Bubble Segment
+### Defining the Bubble Segment
 
 ![](pres_pics/bn04_1.PNG)\
 
@@ -143,7 +143,6 @@ Now, want to look at ratio of hedge fund long and short positions compared with 
 
 
 $$w_T = m_T + \frac{g}{b}(1 - m_T)$$
-Long only fund means $b=1$ and $g=0$. Need to recover $b$ and $g$ and do so in the following regression:
 
 
 ## Return Regressions
