@@ -295,8 +295,108 @@ If funds have trading skills, then the stocks a fund bus will outperform the sto
 
 
 
+## Implied Quarterly Trades
+
+Results support hypothesis that institutions possess significant interim trading skill
+
+### Question
+
+What if we ignore round-trip trades and timing of interim trades within the quarter? 
 
 
+
+
+
+## Implied Quarterly Trades - Method
+
+(1) For each fund and each stoc, aggregate all trades in quarter
+(2) Calculate cumulative net trading position as of the quarter-end
+(3) Calculate DGTW equal and principle weighted returns for buys and sells, get abnormal returns
+(4) Compute difference between abnormal returns buys and sells
+
+Implicitly assumes all trades occur at the closing price on the last day of the quarter
+
+
+
+
+
+## Implied Quarterly Trades - Results
+
+![](pres_pics/py11_11.PNG)\
+
+
+
+
+
+
+
+## Implied Quarterly Trades - Persistence
+
+![](pres_pics/py11_12.PNG)\
+
+
+
+
+
+
+
+
+
+
+
+## Sources of Trading Skill
+
+![](pres_pics/py11_13.PNG)\
+
+
+
+
+
+
+## Illiquidity?
+
+### Question
+
+Does compensation for liquidity provision drive interim trading performance? If so, funds with higer interim trading performance should experience lower or negative implicity trading costs. 
+
+
+### Result
+
+High-skill funds incur higher implicit trading costs - more likely to demand liquidity
+
+
+
+## Illiquidity
+
+![](pres_pics/py11_14.PNG)\
+
+
+
+
+
+## Robustness
+
+- Trading performance and trading horizon does not appear to be correlated
+- Using FIFO and LIFO give similar results
+- Pre- and Post-bubble (tech) yields similar results
+- Some success is determined by insitutional-level factors
+- Funds with the highest dinterim trading performance have higher monthly fund alphas
+
+
+
+## Conclusion
+
+- Authors seek to sort out the real story of trading skills of institutional investors
+- Use interim (intraquarter) data whereas former studies use discrete quarterly
+- Show that institutional investors do have above average skill, and it persists
+- Using same data but with discrete quarterly measures nullify results
+- Illiquidity appears to be important factor, and indicates asymmetric information with arbitrage
+
+
+### Questions
+
+- How long do winners win? Persistence more than 4 quarters? Where should I put my money in long-run?
+- 1999 - 2005 sample too small?
 
 
 
