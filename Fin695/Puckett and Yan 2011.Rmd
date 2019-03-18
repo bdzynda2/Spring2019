@@ -34,7 +34,7 @@ knitr::opts_chunk$set(echo = FALSE)
     - Chen, Jegadeesh and Wermers (2000), Kacperczyk, Sialm, and Zheng (2005), and more
 - Trading performance has since declined or reversed in recent times
     - Duan, Hu, McLean (2009)
-- Conflicting results whether institutional traders can predice future stock returns
+- Conflicting results whether institutional traders can predict future stock returns
     - Bennett, Sias, and Starks (2003), Cai and Zheng (2004)
     
  
@@ -43,7 +43,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 __Claim:__ Previous studies have used quarterly trading data as a proxy which cannot adequately capture intraquarter data, limiting this proxy:
 
-(1) Quarterly data cannot capture buys and sells of the same stock inbetween quarters
+(1) Quarterly data cannot capture buys and sells of the same stock in between quarters
 (2) Quarterly holdings cannot identify exact timing and execution of trades
 
 Previous studies assume all trades occur at the end of the quarter, but they can occur at any time. This can limit the researcher in properly assessing superior trading skills
@@ -160,7 +160,7 @@ There is no information on management fees or fund returns
 - MSFT is $-4.76\% = ((\$40-\$42) / \$42)$
 - Take principle-weighted raw average where:
     - IBM has $.6818 = (\$9000 / \$13200)$ and MSFT $0.3182 = (\$4200 / \$13200)$ 
-    - Total Turn then is $6.06\%$
+    - Total return then is $6.06\%$
   
 
 
@@ -200,7 +200,7 @@ There is no information on management fees or fund returns
 
 ### Hypothesis
 
-If funds possess trading skill, their abnormal round-trip trading perfomcance will be positive
+If funds possess trading skill, their abnormal round-trip trading performance will be positive
 
 
 
@@ -244,7 +244,7 @@ Look at all trades measured from earlier
 
 ### Hypothesis 
 
-If funds have trading skills, then the stocks a fund bus will outperform the stocks it sells
+If funds have trading skills, then the stocks a fund buys will outperform the stocks it sells
 
 
 - Some trades might be due to fund flows and rebalancing
@@ -309,7 +309,7 @@ What if we ignore round-trip trades and timing of interim trades within the quar
 
 ## Implied Quarterly Trades - Method
 
-(1) For each fund and each stoc, aggregate all trades in quarter
+(1) For each fund and each stock, aggregate all trades in quarter
 (2) Calculate cumulative net trading position as of the quarter-end
 (3) Calculate DGTW equal and principle weighted returns for buys and sells, get abnormal returns
 (4) Compute difference between abnormal returns buys and sells
@@ -332,6 +332,11 @@ Implicitly assumes all trades occur at the closing price on the last day of the 
 
 ## Implied Quarterly Trades - Persistence
 
+![](pres_pics/py11_15.PNG)\
+
+
+## Implied Quarterly Trades - Persistence
+
 ![](pres_pics/py11_12.PNG)\
 
 
@@ -341,7 +346,17 @@ Implicitly assumes all trades occur at the closing price on the last day of the 
 
 
 
+## Sources of Interim Trading Skill
 
+
+- Likely profitable stocks: smaller, greater information asymmetries
+- Could be limits to arbitrage as well
+- Illiquidity is positively correlated with information asymmetry and limits to arbitrage
+
+
+## Sources of Trading Skill
+
+![](pres_pics/py11_16.PNG)\
 
 
 ## Sources of Trading Skill
@@ -357,12 +372,15 @@ Implicitly assumes all trades occur at the closing price on the last day of the 
 
 ### Question
 
-Does compensation for liquidity provision drive interim trading performance? If so, funds with higer interim trading performance should experience lower or negative implicity trading costs. 
+Does compensation for liquidity provision drive interim trading performance? If so, funds with higher interim trading performance should experience lower or negative implicitly trading costs. 
 
 
 ### Result
 
 High-skill funds incur higher implicit trading costs - more likely to demand liquidity
+
+
+
 
 
 
@@ -379,8 +397,8 @@ High-skill funds incur higher implicit trading costs - more likely to demand liq
 - Trading performance and trading horizon does not appear to be correlated
 - Using FIFO and LIFO give similar results
 - Pre- and Post-bubble (tech) yields similar results
-- Some success is determined by insitutional-level factors
-- Funds with the highest dinterim trading performance have higher monthly fund alphas
+- Some success is determined by institutional-level factors
+- Funds with the highest interim trading performance have higher monthly fund alphas
 
 
 

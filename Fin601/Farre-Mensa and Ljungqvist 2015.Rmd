@@ -262,7 +262,7 @@ $$\Delta D_{ijt} = \beta T^+_{it-1} + \delta \Delta X_{it-1} + \alpha_{jt} + \va
 - $i$ firms, $j$ industries, and $t$ fiscal years
 - $D$ is long term book leverage
 - $X$ includes ROA, tangibility, firm size, proxy for investment opportunities
-- Main variable of interest is $T^+$, the weighted average of all tax increases that have taken place in the sates in which firm $i$ operates, using $50/50$ average of the fractions of the firm's total employment and sales in a state to approximate the firm's tax nexus.
+- Main variable of interest is $T^+$, the weighted average of all tax increases that have taken place in the states in which firm $i$ operates, using $50/50$ average of the fractions of the firm's total employment and sales in a state to approximate the firm's tax nexus.
 
 
 ## Debt Test
@@ -279,7 +279,7 @@ __Empirical Specification:__
 ### Results
 
 - Supply Curves must be flat
-- Average "Constrained" firm hit with a tax rise increases its leverage between 66 and 162 basis points
+- Average "Constrained" firm hit with a tax raise increases its leverage between 66 and 162 basis points
 - For wedge, it appears firms increase their leverage more who are "constrained", suggesting that they have greater access to debt
 
 
