@@ -26,7 +26,7 @@ How well do traditional measures of financial constraints do their job?
 (1) No Dividend
 (2) No Credit Rating
 (3) Kaplan and Zingales: Index of cash flow, M/B, Leverage, Dividends, and Cash holdings
-(4) Hadlock and Pierce: Index of size, size$^2$ and age
+(4) Hadlock and Pierce: Update KZ - Index of size, size$^2$ and age
 (5) Whited and Wu: Index of shadow price of raising equity on variety of variables
 
 
@@ -48,7 +48,7 @@ None of these measures effectively identify plausibly constrained firms
 
 ### Results
 
-- A firm classified by literature as constrained does not ehave in ways suggesting they are constrained
+- A firm classified by literature as constrained does not behave in ways suggesting they are constrained
 - Robust to out of sample testing with private firms and public firms close to default
 
 
@@ -72,7 +72,7 @@ There are two ways to define financial constraints:
 
 __Curvature__: A firm is financially constrained if it faces a highly inelastic capital supply curve and so is unable to raise capital at any price when it tries to do so
 
-- Let $p(k)$ be a function capturing the price at which a firm with $k$ units of captila can raise an incremental unit of capital in the capital markets. 
+- Let $p(k)$ be a function capturing the price at which a firm with $k$ units of capital can raise an incremental unit of capital in the capital markets. 
 
 
 ## Constraints
@@ -128,7 +128,7 @@ That is to say, a larger wedge implies it is costlier to issue external funding 
 - All public US firms traded on NYSE, Amex, or NASDAQ
 - 1989 through 2011
 - Filter out financial firms, utilities, public-sector entities, non-US firms, OTC/Pink sheets, firm-years with negative or missing total assets/return on assets
-- 91,487 firms with 10,112 firm years
+- 91,487 firms years for 10,112 firms
 
 ### Question
 
@@ -169,14 +169,23 @@ KZ index suggests no size or age difference, holding less cash, more tangible as
 ### Idea
 
 - Trade-off theory suggests firm's demand for debt should increase in its marginal tax rate
-- If taxes increase, the average public firm out to increase its long-term leverage
+- If taxes increase, the average public firm ought to increase its long-term leverage
 
 
 ### Treatment/Exogenous Shock
 
 Authors use increases in state corporate income tax rates as exogenous shocks to a firm's demand for debt
-- Demand shifts would allow estimate of elasticity and relative location of debt supply curve faced by classifed "constrained" and "unconstrained" firms. 
+- Demand shifts would allow estimate of elasticity and relative location of debt supply curve faced by classified "constrained" and "unconstrained" firms. 
 
+
+## Debt Test
+
+### Data
+
+- Heider and Ljungqvist (2015)
+- 43 increases in corporate tax rate across 24 states from 1989 to 2011
+- Look at how these exogenous changes in leverage affect firm capital structure
+- Find that average public firm increases its long-term leverage in response to a corporate incrom tax increase in headquarter state
 
 
 ## Debt Test
@@ -206,7 +215,7 @@ $H_1:$ Firms classified as constrained by the five measures are unable to increa
 
 ### Wedge Definition
 
-$H_2:$ The net tax benefit defined as the difference between the value of the tax shild and the cost to shareholders of issuing debt decreases in the firm's wedge, all else equal - _The greater the wedge, the less new debt the firm should issue in response to a tax
+$H_2:$ The net tax benefit defined as the difference between the value of the tax shield and the cost to shareholders of issuing debt decreases in the firm's wedge, all else equal - _The greater the wedge, the less new debt the firm should issue in response to a tax_
 
 
 
@@ -231,7 +240,7 @@ Do state tax increases trigger just an increase in demand for credit, or also an
 
 ### Two more issues leading to bias:
 
-(1) "Unconstrained" firms are more geographically disperesed than "constrained". Geographically closer constrained frims will have greater exposure to tax increase in headquarter state. This biases in favor of the null. 
+(1) "Unconstrained" firms are more geographically dispersed than "constrained". Geographically closer constrained firms will have greater exposure to tax increase in headquarter state. This biases in favor of the null. 
 
     - Addressed by "good" data
 
@@ -253,14 +262,14 @@ $$\Delta D_{ijt} = \beta T^+_{it-1} + \delta \Delta X_{it-1} + \alpha_{jt} + \va
 - $i$ firms, $j$ industries, and $t$ fiscal years
 - $D$ is long term book leverage
 - $X$ includes ROA, tangibility, firm size, proxy for investment opportunities
-- Main variable of interest is $T^+$, the weighted average of all tax increases that have taken place in the sates in which firm $i$ operates, using $50/50$ average of the fractrions of the firm's total employment and sales in a state to apprximate the firm's tax nexus.
+- Main variable of interest is $T^+$, the weighted average of all tax increases that have taken place in the sates in which firm $i$ operates, using $50/50$ average of the fractions of the firm's total employment and sales in a state to approximate the firm's tax nexus.
 
 
 ## Debt Test
 
 __Empirical Specification:__
 
-- Restric Sample to firms headquartered in states with a tax increase and their immediate neighbors with no tax changes. 
+- Restrict Sample to firms headquartered in states with a tax increase and their immediate neighbors with no tax changes. 
 - Constraining these treated and control neighbors minimizes impact of unobserved differences in local economic conditions. 
 
 
@@ -288,7 +297,7 @@ __Empirical Specification:__
 
 ### Definition
 
-__Equity Recycling__ is the practice of raising cash from the equity market only to pay it out again to shareholdrs
+__Equity Recycling__ is the practice of raising cash from the equity market only to pay it out again to shareholders
 
 - This indicates that a firm does not face an inelastic supply of equity curve, so should not be "constrained" according to curvature definition
 
@@ -304,8 +313,11 @@ __Equity Recycling__ is the practice of raising cash from the equity market only
 ### Validity
 
 What if firms faced a flat equity supply curve given intention of raising equity for recycling?
+
 - Would not be a problem here since firms rarely disclose this intention
-- Market is more negative when firms disclose their intention to recycle equity
+- Market is more negative when firms disclose their intention to recycle equity, but not statistically so
+
+No evidence that firms face a flatter equity supply curve when issuing equity to fund payouts
 
 
 
@@ -317,14 +329,18 @@ What if firms faced a flat equity supply curve given intention of raising equity
 
 __Empirical Specification__:
 
-$$\Delta Payout_{ijt} = \beta \Delta EquityIssue_{ijt} + \delta \Delta Other Sources of Funds_{ijt} + \gamma \Delta Size_{ijt} + \alpha_{jt} + \varepsilon_{ijt}$$
+$$\Delta Payout_{ijt} = \beta \Delta EquityIssue_{ijt} $$
+$$+ \delta \Delta Other Sources of Funds_{ijt} + \gamma \Delta Size_{ijt} + \alpha_{jt} + \varepsilon_{ijt}$$
 
 - _Payout_ is sum of dividends and share repurchases
 - _Equity Issue_ captures a firm's proceeds from firm-initiated equity issues
 - _Other Sources_ is operating cash flow, debt issues net of debt repurchases, proceeds of stock options and sales
 
 
+## Equity Test- Results
 
+- "Constrained" Firms do engage in equity recycling
+- "Constrained" Firms recycle no less than "unconstrained"
 
 
 
@@ -335,13 +351,16 @@ $$\Delta Payout_{ijt} = \beta \Delta EquityIssue_{ijt} + \delta \Delta Other Sou
 
 
 
+
+
+
 ## Equity Test
 
 ### Dividends
 
 - Notice dividends are included in both "dividends" and KZ classifier, and regressor loads heavy on that factor. Dividends are a part of total payouts. 
-- Leaving out dividends from depended variable 
-- Results are the same
+- To avoid potential error, leave out dividends from depended variable 
+- Results are the same (just a bit smaller)
 
 
 
@@ -353,7 +372,7 @@ $$\Delta Payout_{ijt} = \beta \Delta EquityIssue_{ijt} + \delta \Delta Other Sou
 - No exogenous tax change in this test
 - Maybe formerly constrained firms started using equity recycling while constrained to access equity market
     - Forward looking measures in Table 4 categorizing firm in year $t+1$ uphold base results
-
+- Results are still the same as initial test
 
 
 
@@ -385,7 +404,7 @@ $$\Delta Payout_{ijt} = \beta \Delta EquityIssue_{ijt} + \delta \Delta Other Sou
 ## Robustness - Firms Close to Default
 
 - These firms should be financially constrained
-- Firms with high probability of default have statistically insignficant increase in leverage when tax hike occurs. 
+- Firms with high probability of default have statistically insignificant increase in leverage when tax hike occurs. 
 - Firms with high probability of default do not engage in equity recycling
 
 
@@ -395,13 +414,14 @@ $$\Delta Payout_{ijt} = \beta \Delta EquityIssue_{ijt} + \delta \Delta Other Sou
 
 ## What do Financial Constraints Measure?
 
+### Findings
 
 - Authors look at frequency with which public firms raise equity, sell bonds, and take out loan
 - "Constrained" firms are more likely to fund themselves with equity
 - "Constrained" firms rarely issue bonds
 - "Constrained" firms use syndicated loan market (private loans)
 
-It appears that these measures identify smaller, younger, and faster growing firms, not necessarily contrained firms
+It appears that these measures identify smaller, younger, and faster growing firms, not necessarily constrained firms
 
 
 
