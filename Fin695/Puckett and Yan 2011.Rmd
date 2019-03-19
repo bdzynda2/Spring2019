@@ -348,10 +348,30 @@ Implicitly assumes all trades occur at the closing price on the last day of the 
 
 ## Sources of Interim Trading Skill
 
+Profitable Trading is likely to occur in stocks where public info is limited and arbitrage costs are large
 
-- Likely profitable stocks: smaller, greater information asymmetries
-- Could be limits to arbitrage as well
-- Illiquidity is positively correlated with information asymmetry and limits to arbitrage
+- Limited Public Information
+    - Firm size and book to market ratio
+    - Growth firms
+- Limits to arbitrage
+    - idiosyncratic volatility
+- Both should be correlated with various measures of illiquidity
+
+
+
+## Sources of Interim Trading Skill
+
+Steps:
+
+- Assign decile-rank value to each stock based on NYSE breakpoints 
+- Highest decile 10, lowest 1
+- Turnover, illiquidity, and quoted spread show investors prefer liquid stocks
+- However, they appear to also favor high idiosyncratic volatility
+
+
+
+
+
 
 
 ## Sources of Trading Skill
