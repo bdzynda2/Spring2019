@@ -127,7 +127,7 @@ There is no information on management fees or fund returns
 
 (1) ANcerno clients may be different than the average institution
     - no names of institutions given
-    - ANcerno provided offers with some names
+    - ANcerno provided authors with some names
     - Compare changes in quarterly holdings between ANcerno and 13F
 (2) Authors find that characteristics of stock holdings of ANcerno does not differ from average 13F
 (3) ANcerno may not represent random selection of firm holdings and trades
