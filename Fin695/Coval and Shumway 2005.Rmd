@@ -226,7 +226,7 @@ Use semi-parametic model to account for kinks:
 
 ## Setup
 
-![](pres_pics/cs05_10.PNG)
+![](pres_pics/cs05_10.PNG)\
 
 - Rank traders each day according to their normalized morning profit and assign them to one of 20 profitability groups
 - Conduct daily cross-sectional regressions with model above
@@ -236,9 +236,137 @@ Use semi-parametic model to account for kinks:
 
 ## Semiparametric Regression
 
-![](pres_pics/cs05_11.PNG)
+![](pres_pics/cs05_11.PNG)\
 
-Losing trader behavior is more senstivite to the level of their losses than winning traders to the level of their gains!
+Losing trader behavior is more sensitivite to the level of their losses than winning traders to the level of their gains!
+
+
+
+## Time until Midday Position Unwound
+
+Traders who lose money in morning assume greater risk in afternoon. Now, want to see the time traders take to unwind their midday inventory using a hazard model. 
+
+![](pres_pics/cs05_12.PNG)\
+
+
+Where $h_0(\tau)$ is baseline hazard function, $\tau$ measures time since 11am, $(P^M_t - \bar P^I_{i,t})$ measures the futures contract price at 11am less the contract weighted average price at which trader $i$ acquired his inventory on day $t$. 
+
+- Interested in coefficient $\beta_V$ which measures the speed at which positions are unwound. 
+
+
+
+
+
+## Time until Midday Position Unwound
+
+
+![](pres_pics/cs05_13.PNG)\
+
+
+
+
+
+
+
+
+
+## Price Impact 
+
+- Identify local trades that cause the posted price to change from bid to ask because of purchase or sale of local trader for own account
+- If local purchases at a price higher than previous price, identify the trade as responsible for having raised the price. Similar with selling. 
+- With price moving trades, can see if more occur following winning vs losing mornings
+- Use following Regression:
+
+
+![](pres_pics/cs05_14.PNG)\
+
+
+
+## Price Impact
+
+- Traders with losses in the morning are much more dramatically recersed than those set by traders with gains in the morning. 
+- On average the trader with morning losses places 25% more price-setting trades than an equivalent trader with morning gains.
+- Reversals are 27% larger for traders with morning losses than that of other trader
+- Suggests loss aversion is important factor
+
+
+
+
+
+
+
+
+## Price Volatility 
+
+
+
+### Question: 
+
+Do price-setting trades executed by locals with morning losses cause afternoon prices to be more volatile?
+
+### Claim
+
+- Loss aversion may lead to greater afternoon risk seeking and increaed placement of price-moving trades 
+    - afternoon volatility increases following mornings with widespread losses
+- Or could lead to increased reversal in prices set by traders attempting to make up morning losses
+    - Should see only little increase in afternoon volatility
+    
+
+
+
+
+## Price Volatility 
+
+### Measurement
+
+standard deviation of price changes measured at 1-second, 1-minute, 5-minutes, 10-minute and half-day frequency. 
+
+
+### Regression
+
+Normalize normalize afternoon volatility on the volatility in the corresponding morning
+
+$$\sigma_{h,t}^A = \alpha + \beta_{\sigma} \sigma_{h,t}^M + \beta_\lambda ^M + \varepsilon _t$$
+
+- $\sigma^A$ measures abnormal volatilityof afternoon price changes for frequency $h$. 
+- $\lambda^M$ measures aggregate morning losses on day $t$. 
+
+
+
+
+## Conclusion
+
+- Paper claims to offer unique setting to test behavioral theory 
+- Traders appear loss averse
+- Assume more risk following morning losses
+
+
+### Other Thoughts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
