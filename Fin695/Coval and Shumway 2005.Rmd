@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = FALSE)
 - Paper documents evidence for behavioral biases among Chicago Board of Trade
 - Traders in this market are highly loss-averse, assume above average risk to combat earlier losses
 - This behavior has important price impact on afternoon prices
-- Prices set by loss-averse traders are reversed significantly more quickly than by unbiased traderes
+- Prices set by loss-averse traders are reversed significantly more quickly than by unbiased traders
 
 
 
@@ -31,8 +31,9 @@ knitr::opts_chunk$set(echo = FALSE)
 ### Overview
 
 Testing for behavior biases is hard
+
   - Many different behavioral theories rooted in Psychology
-  - Models cannot be easily tested with aggregare data
+  - Models cannot be easily tested with aggregate data
       - Detailed data is hard to get
   - Hard to measure investor horizon 
   - Hard to distinguish from noise trading
@@ -58,7 +59,7 @@ Testing for behavior biases is hard
 (1) Look for signs of traders taking either greater or lesser risk as profits grow
 (2) Split trading day and compare trading in morning and evening
 (3) Examine traders to see if they are more likely to move afternoon prices following morning losses
-(4) Examine permance of price moves spurred by morning losses
+(4) Examine permanence of price moves spurred by morning losses
 (5) Examine whether prices exhibit greater volatility in afternoons following morning losses
 
 
@@ -76,10 +77,18 @@ Testing for behavior biases is hard
 
 (1) Prospect Theory
     - Profits near zero lead to high subsequent risk aversion
-    - Risk-seeking behavior present in regon of losses
+    - Risk-seeking behavior present in region of losses
 (2) House-money Effect
 
 
+## Prospect Theory
+
+![](pres_pics/cs05_0.PNG)\
+
+
+## Prospect vs VN-M Utility
+
+![](pres_pics/cs05_01.PNG)\
 
 
 ## Hypothesis and Assumptions
@@ -91,9 +100,9 @@ __Hypothesis__: There is no relationship between morning returns and afternoon r
 (1) Efficient Markets
 (2) Rational Traders
 (3) Traders have Von Neumann-Morgenstern utility functions
-(4) Negligble Wealth Effects
+(4) Negligible Wealth Effects
 (5) Margin constraints unimportant
-(6) Raders' compensationand reputational concerns neutral
+(6) Traders' compensation and reputation concerns neutral
 (7) Profit opportunities are uncorrelated across trading day
 
 
@@ -105,7 +114,7 @@ __Hypothesis__: There is no relationship between morning returns and afternoon r
 Self-attribution bias, representativeness heuristic, and house money effect predict morning returns will be positively related to afternoon risk-taking
 
 
-## Alternative 2
+### Alternative 2
 
 Risk-seeking in losses predicts the null will be rejected if morning returns are negatively related to afternoon risk-taking
 
@@ -118,7 +127,7 @@ Risk-seeking in losses predicts the null will be rejected if morning returns are
 
 
 - CBOT T-Bond futures 1998
-    - Includes identifiers for buer and seller, price, time of transaction, and on whose behalf
+    - Includes identifiers for buyer and seller, price, time of transaction, and on whose behalf
 - 426 Traders using their own personal account. 
 - To measure profit and inventory, assume each trader closes position at end of day (no beginning inventory)
     - Use inventory controls and winsorize
@@ -131,9 +140,17 @@ Risk-seeking in losses predicts the null will be rejected if morning returns are
 
 - Use historical price change data, second-by-second time and sales from Future Industry Institute Data Center
 - Calculate front-month futures contract prices at the beginning of each minute from 1989 to 1998
-- Fit Ordered Logit Regression to get probability of various portential abs price changes over next minute
+- Fit Ordered Logit Regression to get probability of various potential abs price changes over next minute
+
+
+
+## Data
+
+### Measuring Risk 
+
+
 - Use fitted values to construct an expected absolute price change for each minute of each full trading day in 1998. 
-- Calculate trader's risk by multiplying each minute's risk measure by the trader's position at the beginning of the mintue. 
+- Calculate trader's risk by multiplying each minute's risk measure by the trader's position at the beginning of the minute. 
 - Adjust trader's risk for the minute by any changes in inventory (and therefore risk) in the minute 
 - Calculate cumulative risk - Total Dollar Risk
 
@@ -144,7 +161,7 @@ Risk-seeking in losses predicts the null will be rejected if morning returns are
 
 - Split trading day into two periods: before 11:00 am and after
 - For each trader, calculate morning and evening profits
-- Also, calculat total dollar risk, number of trades and average trade size
+- Also, calculate total dollar risk, number of trades and average trade size
 - Normalize traders profits and risk-taking to account for heterogeneity in margin constraints
 
 
@@ -158,13 +175,13 @@ Risk-seeking in losses predicts the null will be rejected if morning returns are
 
 ## Morning Losses Lead to Afternoon Risk-Taking
 
-Regress Afternon risk-taking on morning profits:
+Regress Afternoon risk-taking on morning profits:
 
 ![](pres_pics/cs05_2.PNG)\
 
 where 
 
-- $\pi^M_{i,t}$ is trader _i_'s data _t_ morning profit
+- $\pi^M_{i,t}$ is trader _i_'s date _t_ morning profit
 - $\big| INV^M_{i,t} \big |$ is abs value of trader _i_'s outstanding position at the end of the morning on date $t$. 
 - $RISK_{i,t}^M$ is trader $i$'s morning risk measured on date $t$
 
@@ -192,24 +209,24 @@ They also used Pooled Regression and Fama-MacBeth
 
 
 
-## Results - Sorting
+## Results - Linearity? Sort it!
 
 ### Table III
 ![](pres_pics/cs05_5.PNG)\
 
 
+## Results - Linearity? Sort it!
+
+### Table III
+![](pres_pics/cs05_51.PNG)\
 
 
-## Results - Logit Model
+
+## Results - Logit Model for Robustness
 
 ![](pres_pics/cs05_6.PNG)\
 
 
-## Results - Logit Model
-
-![](pres_pics/cs05_7.PNG)\
-
-![](pres_pics/cs05_8.PNG)\
 
 
 
@@ -218,7 +235,7 @@ They also used Pooled Regression and Fama-MacBeth
 
 ## Semiparametric Regression
 
-Use semi-parametic model to account for kinks:
+Use semi-parametric model to account for kinks:
 
 ![](pres_pics/cs05_9.PNG)\
 
@@ -227,6 +244,9 @@ Use semi-parametic model to account for kinks:
 ## Setup
 
 ![](pres_pics/cs05_10.PNG)\
+
+
+Steps:
 
 - Rank traders each day according to their normalized morning profit and assign them to one of 20 profitability groups
 - Conduct daily cross-sectional regressions with model above
@@ -238,7 +258,7 @@ Use semi-parametic model to account for kinks:
 
 ![](pres_pics/cs05_11.PNG)\
 
-Losing trader behavior is more sensitivite to the level of their losses than winning traders to the level of their gains!
+Losing trader behavior is more sensitive to the level of their losses than winning traders to the level of their gains!
 
 
 
@@ -284,11 +304,11 @@ Where $h_0(\tau)$ is baseline hazard function, $\tau$ measures time since 11am, 
 
 ## Price Impact
 
-- Traders with losses in the morning are much more dramatically recersed than those set by traders with gains in the morning. 
+- Traders with losses in the morning are much more dramatically reversed than those set by traders with gains in the morning. 
 - On average the trader with morning losses places 25% more price-setting trades than an equivalent trader with morning gains.
 - Reversals are 27% larger for traders with morning losses than that of other trader
 - Suggests loss aversion is important factor
-
+- Tick by tick testing shows reversals happen quickly
 
 
 
@@ -306,7 +326,7 @@ Do price-setting trades executed by locals with morning losses cause afternoon p
 
 ### Claim
 
-- Loss aversion may lead to greater afternoon risk seeking and increaed placement of price-moving trades 
+- Loss aversion may lead to greater afternoon risk seeking and increased placement of price-moving trades 
     - afternoon volatility increases following mornings with widespread losses
 - Or could lead to increased reversal in prices set by traders attempting to make up morning losses
     - Should see only little increase in afternoon volatility
@@ -326,12 +346,26 @@ standard deviation of price changes measured at 1-second, 1-minute, 5-minutes, 1
 
 Normalize normalize afternoon volatility on the volatility in the corresponding morning
 
-$$\sigma_{h,t}^A = \alpha + \beta_{\sigma} \sigma_{h,t}^M + \beta_\lambda ^M + \varepsilon _t$$
+$$\sigma_{h,t}^A = \alpha + \beta_{\sigma} \sigma_{h,t}^M + \beta_\lambda \lambda_t^M + \varepsilon _t$$
 
-- $\sigma^A$ measures abnormal volatilityof afternoon price changes for frequency $h$. 
+- $\sigma^A$ measures abnormal volatility of afternoon price changes for frequency $h$. 
 - $\lambda^M$ measures aggregate morning losses on day $t$. 
 
 
+## Price Volatility 
+
+### Results - Volatility
+
+- Afternoon price volatility is related to morning market maker profitability
+- Traders with morning losses place additional price-setting afternoon trades to assume additional risk
+- Lose results after 10 minute interval
+- Traders with morning losses create only short-term afternoon deviations from fundamentals
+
+## Price Volatility 
+
+### Results - Volatility
+
+![](pres_pics/cs05_16.PNG)\
 
 
 ## Conclusion
@@ -339,11 +373,13 @@ $$\sigma_{h,t}^A = \alpha + \beta_{\sigma} \sigma_{h,t}^M + \beta_\lambda ^M + \
 - Paper claims to offer unique setting to test behavioral theory 
 - Traders appear loss averse
 - Assume more risk following morning losses
+- Price impact is not long lasting for these traders
 
 
 ### Other Thoughts
 
-
+- One year of data - Could this be learned by traders and corrected?
+- Do we see cyclical ebbs and flows of biases?
 
 
 
