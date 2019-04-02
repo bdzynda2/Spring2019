@@ -48,7 +48,7 @@ What exactly happens to return predictability outside of a study's sample period
 
 ## Introduction
 
-## Key Findings
+### Key Findings
 
 Using 97 predictors from 79 studies the average predictor long-short quintile portfolio return:
 
@@ -130,7 +130,7 @@ $R_{it} = \alpha_i + \beta_1$ _Post Sampe_ $Dummy_{i,t} + \beta2$ _Post Publicat
 ### Formal Hypotheses
 
 (1) If statistical biases are the source of in-sample predictability, then the coefficients on both the post-sample and post-publication dummies should be -0.582
-(2) If predictors' returns are entirely the result of mmispricing and arbitrage resulting from publication corrects all mispricing, the the post-publication coefficient should be equal to -0.582 and the post-sample dummy should not be close to zero
+(2) If predictors' returns are entirely the result of mispricing and arbitrage resulting from publication corrects all mispricing, the the post-publication coefficient should be equal to -0.582 and the post-sample dummy should not be close to zero
 (3) If there are no statistical biases and academic papers have no influence on investors' actions, then both of the coefficients should equal zero. 
 
 
@@ -152,7 +152,7 @@ $R_{it} = \alpha_i + \beta_1$ _Post Sampe_ $Dummy_{i,t} + \beta2$ _Post Publicat
 
 ### Question
 
-Do predictor portfolio returns with higer in-sample means decline more post-publication?
+Do predictor portfolio returns with higher in-sample means decline more post-publication?
 
 ### Test
 
@@ -225,7 +225,7 @@ Do predictor portfolio returns with higer in-sample means decline more post-publ
 
 (1) Event - share issues, changes in analyst recommendations, R&D changes
 (2) Market - volume, price, returns, shares outstanding, momentum
-(3) Valuation - sales-to-price, book-to-maret
+(3) Valuation - sales-to-price, book-to-market
 (4) Fundamentals - Debt, taxes, accruals
 
 
@@ -246,24 +246,72 @@ Do predictor portfolio returns with higer in-sample means decline more post-publ
 ## Costly Arbitrage
 
 
+Predictor portfolios with stocks that are costlier to arbitrage should decline less post-publication.
+
+### Hypothesis
+
+If predictor returns are the outcome of rational asset pricing, then the post-publication decline should not be related to arbitrage costs such as:
+
+(1) Size
+(2) Spreads
+(3) Dollar Volume
+(4) Idio. Risk
+(5) Dividend
+
+Additionally, use first principle component of all 5.
+
+
+
+
+## Costly Arbitrage
+
+### Method
+
+- For each month compute average cross-sectional ranking for a trait between 0 and 1
+- Estimate average rank of the stocks in the long or short sides of the portfolio
+- Creates monthly average time series for each trait
+- Take average of each time series to estimate single costly arbitrage predictor
+
+![](pres_pics/mp16_7.PNG)\
 
 
 
 
 
 
+## Costly Arbitrage
+
+![](pres_pics/mp16_8.PNG)\
 
 
 
 
+## Post-Publication Trading Activity in Predictor Portfolios
+
+### Hypothesis
+
+If academic publication provides market participants with information, then informed trading activity should affect not only prices, but other indicators of trading
+
+
+### Table VI
+
+![](pres_pics/mp16_9.PNG)\
 
 
 
 
+## Conclusion
+
+### Summary
+
+- 97 predictors formed in extreme quintiles test for pre-, post-, sample and post-publication periods
+- There is some statistical bias, capped at 26%
+- Average predictors return declines by 58% post-publication (32% after bias)
+- There appears to be decay, and results due to mispricing
+- Costlier arbitrage has higher returns - attracts sophisticated investors
 
 
+### Other Points
 
-
-
-
-Here we look at averages, but this could highlight a few important factors and diminish others
+- Here we look at averages, but this could highlight a few important factors and diminish others
+- No behavioral anomalies here
