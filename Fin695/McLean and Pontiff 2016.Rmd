@@ -40,7 +40,7 @@ What exactly happens to return predictability outside of a study's sample period
 
 (1) If findings are spurious, there should be no returns outside of the sample period
 (2) If return predictability reflects rational expectations, findings should remain
-(3) If return predictability is due to mispricing, then return predictability should disappear or be decay after a paper is published
+(3) If return predictability is due to mispricing, then return predictability should disappear or decay after a paper is published
 
 
 
