@@ -119,14 +119,14 @@ There are three firms:
 
 
 
-## Empirical Musings
+## What's the Difference?
 
 ### BK
 
 - Run a standard DID by including dummy variable which is equal to 1 in year firm repatriates and zero otherwise
 - Coefficient then measures increase in response variable for firms that do not repatriate (Group 3) versus the increase in response variable for firms that do not repatriate (Group 1 and 2)
 
-## Empirical Musings
+## What's the Difference?
 
 ### BK
 
@@ -139,7 +139,7 @@ There are three firms:
 _$DID_{BK}$ = Diff[Group 3] - Diff[Group 1 and 2]_
 
 
-## Empirical Musings
+## What's the Difference?
 
 ### DFF
 
@@ -149,7 +149,7 @@ _$DID_{BK}$ = Diff[Group 3] - Diff[Group 1 and 2]_
 - Firms wih unrepatriated income in low-tax countries have high probability of repatriation
 
 
-## Empirical Musings
+## What's the Difference?
 
 ### DFF
 
@@ -158,6 +158,98 @@ Coefficient measures the increase in the response variable for firms with high p
 _$DID_{DFF}$ = Diff[Group 2 and 3] - Diff[Group 1]_
 
 
+
+- Estimating the coefficient this way will make it larger and positive than BK finding even if effect is zero
+
+
+
+
+
+## Analogy
+
+### That's sick bro!
+
+- Group 1
+    - People that are healthy
+- Group 2 and 3
+    - People that are sick
+- Group 3
+    - Sick people given a treatment
+    
+-If you wanted to evaluate the performance of a treatment, you would not compare change in helath of those who received the treatment (3) to those who did not (1 and 2) - as BK do. 
+
+- You would not compare the change in the health of those that were predicted to receive the treatment (the sick 2 and 3) to those who are unlikely to receive the treatment (1). This is approach of DFF.
+
+
+
+
+
+## Empirics
+
+### Goal
+
+Conditional on being able to tae advantage of the tax subsidy on repatriation in the AJCA, do firms invest ore or increase equity payouts if they repatriated under the AJCA. 
+
+- Three groups $\implies$ two coefficients, not 1, in DID
+
+![](fp12_1.PNG)\
+
+
+
+
+
+## Data
+
+- Collect AJCA data from firms' 10-ks
+- Searched using Perl script for AJCA from 2004 - 2006
+    - 804 that discussed repatriation, did not repatriate
+    - 442 firms repatriated income ($298 billion repatriated)
+    - Remaining sample of firms from this period did not disclose
+- Need to measure both firm's current and recent history of foreign profits, and stock of foreign profits that are classified as permanently reinvested abroad
+
+
+
+
+
+## Characterisitcs of firms that repatriated income under the AJCA
+
+![](fp12_1.PNG)\
+
+
+
+## Characterisitcs of firms that repatriated income under the AJCA
+
+![](fp12_3.PNG)\
+
+
+
+
+## Empirical Analysis
+
+
+(1) Examine which firm characterisitcs are associated with likelihood of repatriating under AJCA
+    - Estimate cross-sectional model of who repatriates using M/B, size, preinvestment profitability
+(2) Use these variables to predict whether firms repatriate or not
+(3) Use second set of variabels to measure firm's stock of unrepatriated earnings
+    - log of one plus firm's permanently reinvested foreign earnings - use dummy = 1 if greater than zero. 
+(4) Measure tax benefit of repatriation 
+    - compare taxes that would have been paid on the foreign income had it been taxed in US at 35% to the actual foreign taxes paid. Scale by market value of assets
+    
+    
+
+
+## Empirical Analysis
+
+![](fp12_4.PNG)\
+
+
+
+
+
+
+## Empirical Analysis
+
+![](fp12_5.PNG)\
 
 
 
