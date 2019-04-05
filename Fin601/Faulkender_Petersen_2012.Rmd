@@ -1,0 +1,165 @@
+---
+title: 'Investment and Capital Constraints: Repatriations Under the AJCA'
+author: "Michael Faulkender and Mitchell Petersen"
+date: "April 4, 2019"
+output:  
+  beamer_presentation:
+    theme: "Berkeley"
+    colortheme: "default"
+    fonttheme: "serif"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Introduction
+
+### Two Big Questions
+
+(1) To what extent do financing frictions constrain investments that firms would otherwise make?
+(2) Did firm that repatriated under the American Jobs Creation Act significantly increase their domestic investment?
+
+
+
+
+
+## Previous Literature
+
+### DFF
+
+Dharmapala, Foley, and Forbes (2011), "Watch What I Do, Not What I Say: The Unintended Consequences of the Homeland Investment Act" _JF_. 
+
+### BK
+
+Blouin and Krull (2009), "Bringing it Home: A Study of the Incentives Surrounding the Repatriation of Foreign Earnings Under the American Jobs Creation Act of 2004" _JAR_.
+
+
+
+
+
+## Previous Literature
+
+### Findings
+
+- Examine Use of Funds repatriated under the AJCA
+- Find no increase in investment due to repatriation
+- Repatriated Funds were used to increase payments to shareholders
+- However they both employ two different research designs
+
+
+
+
+
+
+## Introduction
+
+In contrast, Faulkender and Petersen find:
+
+- AJA led to large increases in investment among subset of firms that are capital constrained
+- Experimental design of former authors did not isolate constrained firms properly
+    
+
+
+
+
+
+
+## Background
+
+- American Jobs Creation Act (AJCA) signed into law in 2004 by President George W Bush
+- Encouraged domestic investment by lowering the tax costs of repatriating income US firms had sitting abroad
+- Firms have an incentive to keep cash abroad 
+    - The longer the deferral, the lower the present value of the tax to bring cash home
+    - This assumes investment opportunities are same in both countries and no capital market imperfections
+- But, what if we relax the above assumption?
+
+
+
+
+
+## Background
+
+### Do the incentives align?
+
+- In a world without financial frictions, firms will invest in all positive NPV projects
+- If US has domestic high NPV projects, firms will repatriate, use domestic internal funds, or capital markets
+- With financial frictions, the cheapest method wins
+- Then, the AJCA assumes by design that firms are financially constrained, having no domestic internal funds or access to capital markets
+
+
+## Background
+
+There are three firms:
+
+(1) Firms with little or no foreign earnings in low-tax jurisdictions 
+(2) Firms that repatriate foreign income under AJCA and are constrained 
+(3) Firms that repatriate foreign income under AJCA and not constrained 
+
+
+
+## Empirical Musings
+
+
+- Prior work by BK and DFF use a DID where sample of firms is divided into treated and untreated group controlling for firm characteristics
+- But, there are THREE groups!
+- Difference between findings here and previous work lies in this idea
+
+
+
+## Empirical Musings
+
+### Demonstration
+
+- Group 1: Firms with no tax-advantage in foreign earnings, do not increase response variable
+- Group 2: Firms with tax-advantaged foreign earnings increase response variable with repatriation
+- Group 3: Firms with tax-advantaged foreign earnings increase response variable without repatriation
+
+
+
+
+## Empirical Musings
+
+### BK
+
+- Run a standard DID by including dummy variable which is equal to 1 in year firm repatriates and zero otherwise
+- Coefficient then measures increase in response variable for firms that do not repatriate (Group 3) versus the increase in response variable for firms that do not repatriate (Group 1 and 2)
+
+## Empirical Musings
+
+### BK
+
+- Cannot know if effect is due to:
+    - Repatriation (comparison of group 3 to group 2)
+    - Or due to differences between firms with and without foreign earnings in low-tax jurisdictions (difference between group 1 and both group 2 and 3)
+
+ - Because first group (in BK) has higher increase in investment than the second group, coefficient on AJCA dummy is positive, even when there is no effect    
+    
+_$DID_{BK}$ = Diff[Group 3] - Diff[Group 1 and 2]_
+
+
+## Empirical Musings
+
+### DFF
+
+- Use instrumental variable approach
+    - IV: firm's foreign tax rate is lower than US and whether firm's foreign subsidiaries are in tax havens
+- Replaces AJCA dummy in BK with probability that firm repatriates
+- Firms wih unrepatriated income in low-tax countries have high probability of repatriation
+
+
+## Empirical Musings
+
+### DFF
+
+Coefficient measures the increase in the response variable for firms with high probability of repatriation (Groups 2 and 3) independent of whether they actually repatriate income versus the increase in the response variable for firms with low probability of repatriation (Group 1)
+
+_$DID_{DFF}$ = Diff[Group 2 and 3] - Diff[Group 1]_
+
+
+
+
+
+
+
