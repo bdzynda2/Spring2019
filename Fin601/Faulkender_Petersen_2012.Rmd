@@ -46,7 +46,7 @@ Blouin and Krull (2009), "Bringing it Home: A Study of the Incentives Surroundin
 - Examine Use of Funds repatriated under the AJCA
 - Find no increase in investment due to repatriation
 - Repatriated Funds were used to increase payments to shareholders
-- However they both employ two different research designs
+- Consistent with two research designs
 
 
 
@@ -57,7 +57,7 @@ Blouin and Krull (2009), "Bringing it Home: A Study of the Incentives Surroundin
 
 In contrast, Faulkender and Petersen find:
 
-- AJA led to large increases in investment among subset of firms that are capital constrained
+- AJCA led to large increases in investment among subset of firms that are capital constrained
 - Experimental design of former authors did not isolate constrained firms properly
     
 
@@ -169,14 +169,11 @@ _$DID_{DFF}$ = Diff[Group 2 and 3] - Diff[Group 1]_
 
 ### That's sick bro!
 
-- Group 1
-    - People that are healthy
-- Group 2 and 3
-    - People that are sick
-- Group 3
-    - Sick people given a treatment
+- Group 1 - People that are healthy
+- Group 2 and 3 - People that are sick
+- Group 3 - Sick people given a treatment
     
--If you wanted to evaluate the performance of a treatment, you would not compare change in helath of those who received the treatment (3) to those who did not (1 and 2) - as BK do. 
+- If you wanted to evaluate the performance of a treatment, you would not compare change in helath of those who received the treatment (3) to those who did not (1 and 2) - as BK do. 
 
 - You would not compare the change in the health of those that were predicted to receive the treatment (the sick 2 and 3) to those who are unlikely to receive the treatment (1). This is approach of DFF.
 
@@ -213,7 +210,7 @@ Conditional on being able to tae advantage of the tax subsidy on repatriation in
 
 ## Characterisitcs of firms that repatriated income under the AJCA
 
-![](fp12_1.PNG)\
+![](fp12_2.PNG)\
 
 
 
@@ -233,10 +230,19 @@ Conditional on being able to tae advantage of the tax subsidy on repatriation in
 (3) Use second set of variabels to measure firm's stock of unrepatriated earnings
     - log of one plus firm's permanently reinvested foreign earnings - use dummy = 1 if greater than zero. 
 (4) Measure tax benefit of repatriation 
-    - compare taxes that would have been paid on the foreign income had it been taxed in US at 35% to the actual foreign taxes paid. Scale by market value of assets
+    - compare taxes that would have been paid on the foreign income had it been taxed in US at 35% to () the actual foreign taxes paid. Scale by market value of assets
     
     
+## Empirical Analysis
 
+### Result
+
+- Increasing firm size from 25th to 75th percentile raises probability of repatriation by 3.5% (profits 2.8%)
+- Most powerful predictor is supply of unrepatriated foreign earnings
+- Increase in tax wedge from 25th to 75th percentile raises probability of repatriation by 1.1%
+- Large tax loss carryforwards increase (25th to 75th percentile) lowers probability of repatriation by 3.4%
+- Average rise in investment across repatriating firms is 0.17% and 1.85% when isolated to capital constrained firms! Accounts for 78% of the total $78.3 billion invested
+    - Yet capital constrained firms are only 27% of the sample
 
 ## Empirical Analysis
 
@@ -250,6 +256,94 @@ Conditional on being able to tae advantage of the tax subsidy on repatriation in
 ## Empirical Analysis
 
 ![](fp12_5.PNG)\
+
+
+
+
+
+## Empirical Analysis
+
+### Should we call Endogeneity Police?
+
+Can you get a positive coeff. on residual times capital-constrained variable, without constrained firms increasing investment due to AJCA?
+
+- Constrained repatriators have higher than average investment rates - controlled by firm dummies
+- Investment opportunity higher in the latter half of the sample than the first - controlled by time dummies
+- Investment opportunities for firms with foreign earnings or capital constrained firms increase independently of repatriation - controlled by predicted probability of repatriation 
+    - and dummy=0 prior to 2004 and equal to constraint measure after 2003
+    - Controls for any change in investment rates of constrained firms relative to unconstrained post-2003 relative to pre-2004
+    
+    
+    
+    
+## Empirical Analysis
+
+### Restricted Sample
+
+- Drop firms unlikely ($Pr$ less than median $Pr$) to repatriate income (focus on groups 2 and 3). 
+- Among firms able to take advantage of the AJCA tax subsidy, did those who repatriated invest more?
+
+
+### Results
+
+- Results consistent with full sample: only residual*capital constrained matters
+- Looking at only firms with positive foreign earnings also yields consistent results
+- Consistent with different definitions of capital constraint (CF and bond ratings)
+
+
+
+
+
+## Empirical Analysis
+
+### Other Results
+
+- No significant effect of AJCA on employment 
+- Neither constrained nor unconstrained firms change their leverage or cash levels because of repatriation
+
+
+
+
+## Empirical Analysis
+
+### Payout Policy
+
+- Similar Regressions as before, but use Dividend + Repurchases / MVE as dependent variable
+- BK method shows increase in equity payout
+- DFF shows even larger increase in equity payout
+    - Recall, neither method shows effect of repatriation 
+- Including both probability of repatriation and residual, firms with greater probability of repatriation increase equity payouts after 2003
+    - But, conditioning on the probability of repatriation, actual repatriating earnings under the AJCA have no effect on payout
+    
+    
+    
+## Empirical Analysis
+
+![](fp12_6.PNG)\
+
+
+
+    
+## Empirical Analysis
+
+![](fp12_7.PNG)\
+
+
+
+
+
+
+
+## Conclusion
+
+- For the average firm, little increase in investment post AJCA
+- Significant increase in investment for subset of capital constrained firms (quarter of total repatriating firms)
+- Consistent with expectations of financial frictions
+- No effect on payout
+- Incentives should be aligned with all firms for future policy, not just capital contrained firms
+
+
+
 
 
 
