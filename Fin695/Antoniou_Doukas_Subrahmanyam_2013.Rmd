@@ -38,7 +38,7 @@ __Newswatchers__ documented by Hong and Stein (1999) are different groups who re
 
 ### Hypothesis
 
-- Newswatchers will underreact more strongly whent they receive information that contradicts their sentiment due to cognitive dissonance.
+- Newswatchers will underreact more strongly when they receive information that contradicts their sentiment due to cognitive dissonance.
 - This implies bad (good) news among (loser) winner stocks will diffuse slowly when sentiment is optimistic (pessimistic). 
 - This will lead to momentum, driven by the loser portfolio in optimistic sentiment periods and the winner portfolio in pessimistic sentiment periods. 
 
@@ -49,10 +49,10 @@ __Newswatchers__ documented by Hong and Stein (1999) are different groups who re
 
 ### Main Results
 
-- Strong momentum in optimistic periods controlloing for market returns, analyst coverage, size, and CAPM/FF
+- Strong momentum in optimistic periods controlling for market returns, analyst coverage, size, and CAPM/FF
 - No momentum in pessimistic periods
 - Small investors are slow to sell losers during the optimistic periods in intraday transactions
-- Momentum profits reverse significantly after optimistics periods (but not in pessimistic periods)
+- Momentum profits reverse significantly after optimistic periods (but not in pessimistic periods)
 
 
 
@@ -99,7 +99,7 @@ __Newswatchers__ documented by Hong and Stein (1999) are different groups who re
 
 - Purge Macroeconomics by regressing index on:
     - growth in industrial production
-    - real growth in durable ocnsumption
+    - real growth in durable consumption
     - nondurable consumption
     - services consumption
     - growth in employment
@@ -116,9 +116,9 @@ __Newswatchers__ documented by Hong and Stein (1999) are different groups who re
 
 For discovering optimism/pessimism:
 
-- caluclate weighted-rolling average of the setiment level for the 3 motnhs prior to the end of the formation period
-- give weight of 3 to sentiment in prior mornth, 2 to the one in month prior to that, and 1 beyond that
-- Classify as optimistic (pessimistic) if the 3-month rollowing average ending in month $t$ belongs in the top (bottom) 30% of the 3-month rolling average in the time series
+- calculate weighted-rolling average of the sentiment level for the 3 months prior to the end of the formation period
+- give weight of 3 to sentiment in prior month, 2 to the one in month prior to that, and 1 beyond that
+- Classify as optimistic (pessimistic) if the 3-month rolling average ending in month $t$ belongs in the top (bottom) 30% of the 3-month rolling average in the time series
 
 
 
@@ -139,13 +139,17 @@ Negative (positive) information about stocks when sentiment is optimistic (pessi
 
 ### First Test
 
-- Examine profitability of the momentum stratedgy conditioning on pessimistic and optimistic investor sentiment states
-- Look at strateegies based on $J = 6$ month ranking period and holding periods of $K =  3,6,12$ months sorted by investor sentiment
+- Examine profitability of the momentum strategy conditioning on pessimistic and optimistic investor sentiment states
+- Look at strategies based on $J = 6$ month ranking period and holding periods of $K =  3,6,12$ months sorted by investor sentiment
 
+
+
+
+## Empirical Analysis
 
 ### Result
 
-- Average monthly profits in optimistic periods are higly signficant, decrease as optimism decreases
+- Average monthly profits in optimistic periods are highly significant, decrease as optimism decreases
 - Higher momentum profits in optimistic periods arise because loser stocks continue to underperform in subsequent periods
     - bad news diffuses slowly when investors are optimistic - cognitive dissonance
 - Profits significant in "mild" sentiment months supported by prior studies - greater optimism than probability implies
@@ -163,7 +167,7 @@ Negative (positive) information about stocks when sentiment is optimistic (pessi
 
 ## Empirical Analysis
 
-Consitent with Cooper et al. (2004) consider market states
+Consistent with Cooper et al. (2004) consider market states
 
 ### Design
 
@@ -174,7 +178,7 @@ Consitent with Cooper et al. (2004) consider market states
 ## Results
 
 - Most (87.2%) significant momentum profits occur in UP markets
-- Momentum strategies in DOWN markets
+- Momentum strategies in DOWN markets produce insignificant momentum profits (generally).
 
 
 
@@ -207,12 +211,16 @@ Consitent with Cooper et al. (2004) consider market states
 
 ### Model
 
-$$PROFITS = b_0 + b_1SENTIMENT + b_2MARKET + b_3 MARKET^2 + u$$
+$$PROFITS = b_0 + b_1SENTIMENT$$
+$$+ b_2MARKET + b_3 MARKET^2 + u$$
 
 Where:
 
 - $PROFITS$ is the time series of average monthly MOM profits at $t$
-- $MARKET$ is lagged market return of the value-weighted index incluyding divedends
+- $MARKET$ is lagged market return of the value-weighted index including dividends
+
+
+## Empirical Analysis
 
 ### Results
 
@@ -241,10 +249,13 @@ Where:
 - Isolate role of analyst following size by regressing log one plus ANALYSTS = a + b*SIZE + e 
     - get ranked residuals and separate in three equal weighted portfolios 
     - Makes low-, mid-, and high-residual coverage stocks. 
+
+
+## Empirical Analysis
     
 ### Results
 
-- Difference in momentum profits between optimistic and pessimistic perdios is simlare across all groups
+- Difference in momentum profits between optimistic and pessimistic periods is similar across all groups
 - Retain insignificance in pessimistic periods
 
 
@@ -273,8 +284,8 @@ Where:
 
 ### Result
 
-- Momentum is generally larger for smaller compaines
-- Sentiment is more dramatic in smaller compaines (probably diffuses more slowly
+- Momentum is generally larger for smaller companies
+- Sentiment is more dramatic in smaller companies (probably diffuses more slowly)
 
 
 
@@ -307,8 +318,8 @@ $$r_{kt}^{ADJ} = r_{kt} - \sum_t \beta_{ik} f_{it}$$
 $$r_{kt}^{ADJ} = r_{kt} - (\beta_{ik} - \beta_{ik}^{SENT} \times SENTIMENT_{t-j})(R_m - R_f)$$
 
 -  $r_{kt}$ is the raw returns of each MOM portfolio for the strategy in the holding period month $K$ in month $t$
--  $\beta_{ik}$ is the estimated factor lading in month $K$ on excess the market return
--  $\beta_{ik}^{SENT}$ is the factor laoding in month $K$ on the interaction between excess market return and investor sentiment
+-  $\beta_{ik}$ is the estimated factor loading in month $K$ on excess the market return
+-  $\beta_{ik}^{SENT}$ is the factor loading in month $K$ on the interaction between excess market return and investor sentiment
 
 
 
@@ -340,6 +351,7 @@ $$r_{kt}^{ADJ} = r_{kt} - (\beta_{ik} - \beta_{ik}^{SENT} \times SENTIMENT_{t-j}
 ### An Alternate Sentiment Index
 
 Following Baker and Wurgler (2006, 2007):
+
   - Make time series of six sentiment proxies:
       (1) Trading Volume
       (2) Premium for dividend-paying stocks
@@ -363,7 +375,7 @@ Following Baker and Wurgler (2006, 2007):
 
 ## Cognitive Dissonance, Short Sale Constraints, and Momentum Profits
 
-Authors have shown that momentum is stronger in optimistic sentiment periods, driven by continued underperformance in loser portfolio. \\
+Authors have shown that momentum is stronger in optimistic sentiment periods, driven by continued underperformance in loser portfolio. \
 
 
 They claim cognitive dissonance toward negative news during optimistic period is the cause
@@ -371,7 +383,7 @@ They claim cognitive dissonance toward negative news during optimistic period is
 ### Left to Show
 
 (1) Examine market's response to negative earnings surprises for loser stocks, conditional on sentiment
-(2) Short-selling constraints a part of the reason that congnitive dissonance subsists
+(2) Short-selling constraints a part of the reason that cognitive dissonance subsists
 (3) Effect of smaller vs big investors
 (4) Reversion in the long-run
 
@@ -389,8 +401,8 @@ They claim cognitive dissonance toward negative news during optimistic period is
 
 ### Result
 
-- Short-term absolute reaction for negative earnings during optimistic periods is highre than that for pessimistic ones
-- Post-earnings announcement drift after negative surpries is stronger when sentiment is optimistic
+- Short-term absolute reaction for negative earnings during optimistic periods is higher than that for pessimistic ones
+- Post-earnings announcement drift after negative surprises is stronger when sentiment is optimistic
 
 
 
@@ -424,7 +436,7 @@ They claim cognitive dissonance toward negative news during optimistic period is
 
 ### Result
 
-- small investor order flow for loser portfolio during optimistic periods is positive and signficant in 5 of 6 months in formation period
+- small investor order flow for loser portfolio during optimistic periods is positive and significant in 5 of 6 months in formation period
     - turns negative in holding period
 - Supports idea that unsophisticated investors are slow to sell losers during optimistic periods, prolonging pricing of bad news
 
@@ -441,7 +453,7 @@ They claim cognitive dissonance toward negative news during optimistic period is
 
 ## Investor Size
 
-- Authors calculate avewrage daily OIB for large and small investors following strong negative earnings surprises
+- Authors calculate average daily OIB for large and small investors following strong negative earnings surprises
 - Selling pressure during event period for small investors is stronger when sentiment is pessimistic (not statistically significant)
 - Small investors exert delayed selling pressure in adjustment period, suggesting cognitive dissonance
 - Large investors sell losers with bad news four times more heave when sentiment is optimistic
@@ -469,5 +481,7 @@ They claim cognitive dissonance toward negative news during optimistic period is
 
 
 
+## Conclusions
 
+- Table 4 $R^2$ appears small
 
