@@ -1,7 +1,7 @@
 ---
 title: 'Investment and Capital Constraints: Repatriations Under the AJCA'
 author: "Michael Faulkender and Mitchell Petersen"
-date: "April 4, 2019"
+date: "April 8, 2019"
 output:  
   beamer_presentation:
     theme: "Berkeley"
@@ -113,8 +113,8 @@ There are three firms:
 ### Demonstration
 
 - Group 1: Firms with no tax-advantage in foreign earnings, do not increase response variable
-- Group 2: Firms with tax-advantaged foreign earnings increase response variable with repatriation
-- Group 3: Firms with tax-advantaged foreign earnings increase response variable without repatriation
+- Group 2: Firms with tax-advantaged foreign earnings increase response variable without repatriation
+- Group 3: Firms with tax-advantaged foreign earnings increase response variable with repatriation
 
 
 
@@ -124,7 +124,7 @@ There are three firms:
 ### BK
 
 - Run a standard DID by including dummy variable which is equal to 1 in year firm repatriates and zero otherwise
-- Coefficient then measures increase in response variable for firms that do not repatriate (Group 3) versus the increase in response variable for firms that do not repatriate (Group 1 and 2)
+- Coefficient then measures increase in response variable for firms that do repatriate (Group 3) versus the increase in response variable for firms that do not repatriate (Group 1 and 2)
 
 ## What's the Difference?
 
@@ -322,8 +322,17 @@ Can you get a positive coeff. on residual times capital-constrained variable, wi
 - BK method shows increase in equity payout
 - DFF shows even larger increase in equity payout
     - Recall, neither method shows effect of repatriation 
+    
+    
+    
+    
+## Empirical Analysis
+
+### Payout Policy    
+    
 - Including both probability of repatriation and residual, firms with greater probability of repatriation increase equity payouts after 2003
-    - But, conditioning on the probability of repatriation, actual repatriating earnings under the AJCA have no effect on payout
+- But, conditioning on the probability of repatriation, actual repatriating earnings under the AJCA have no effect on payout
+- Reestimate DID with three sets of time dummies, including time dummies $\times$ probability of repatriation and time dummies $\times$ whether firm repatriated income under AJCA (Figure 3)
     
     
     
