@@ -146,7 +146,7 @@ _$DID_{BK}$ = Diff[Group 3] - Diff[Group 1 and 2]_
 - Use instrumental variable approach
     - IV: firm's foreign tax rate is lower than US and whether firm's foreign subsidiaries are in tax havens
 - Replaces AJCA dummy in BK with probability that firm repatriates
-- Firms wih unrepatriated income in low-tax countries have high probability of repatriation
+- Firms with unrepatriated income in low-tax countries have high probability of repatriation
 
 
 ## What's the Difference?
@@ -173,7 +173,7 @@ _$DID_{DFF}$ = Diff[Group 2 and 3] - Diff[Group 1]_
 - Group 2 and 3 - People that are sick
 - Group 3 - Sick people given a treatment
     
-- If you wanted to evaluate the performance of a treatment, you would not compare change in helath of those who received the treatment (3) to those who did not (1 and 2) - as BK do. 
+- If you wanted to evaluate the performance of a treatment, you would not compare change in health of those who received the treatment (3) to those who did not (1 and 2) - as BK do. 
 
 - You would not compare the change in the health of those that were predicted to receive the treatment (the sick 2 and 3) to those who are unlikely to receive the treatment (1). This is approach of DFF.
 
@@ -185,7 +185,7 @@ _$DID_{DFF}$ = Diff[Group 2 and 3] - Diff[Group 1]_
 
 ### Goal
 
-Conditional on being able to tae advantage of the tax subsidy on repatriation in the AJCA, do firms invest ore or increase equity payouts if they repatriated under the AJCA. 
+Conditional on being able to take advantage of the tax subsidy on repatriation in the AJCA, do firms invest more or increase equity payouts if they repatriated under the AJCA. 
 
 - Three groups $\implies$ two coefficients, not 1, in DID
 
@@ -224,13 +224,13 @@ Conditional on being able to tae advantage of the tax subsidy on repatriation in
 ## Empirical Analysis
 
 
-(1) Examine which firm characterisitcs are associated with likelihood of repatriating under AJCA
+(1) Examine which firm characteristics are associated with likelihood of repatriating under AJCA
     - Estimate cross-sectional model of who repatriates using M/B, size, preinvestment profitability
 (2) Use these variables to predict whether firms repatriate or not
-(3) Use second set of variabels to measure firm's stock of unrepatriated earnings
+(3) Use second set of variables to measure firm's stock of unrepatriated earnings
     - log of one plus firm's permanently reinvested foreign earnings - use dummy = 1 if greater than zero. 
 (4) Measure tax benefit of repatriation 
-    - compare taxes that would have been paid on the foreign income had it been taxed in US at 35% to () the actual foreign taxes paid. Scale by market value of assets
+    - compare taxes that would have been paid on the foreign income had it been taxed in US at 35% to the actual foreign taxes paid. Scale by market value of assets
     
     
 ## Empirical Analysis
@@ -269,6 +269,16 @@ Can you get a positive coeff. on residual times capital-constrained variable, wi
 
 - Constrained repatriators have higher than average investment rates - controlled by firm dummies
 - Investment opportunity higher in the latter half of the sample than the first - controlled by time dummies
+
+
+
+
+
+## Empirical Analysis
+
+### Should we call Endogeneity Police?
+
+
 - Investment opportunities for firms with foreign earnings or capital constrained firms increase independently of repatriation - controlled by predicted probability of repatriation 
     - and dummy=0 prior to 2004 and equal to constraint measure after 2003
     - Controls for any change in investment rates of constrained firms relative to unconstrained post-2003 relative to pre-2004
@@ -340,7 +350,7 @@ Can you get a positive coeff. on residual times capital-constrained variable, wi
 - Significant increase in investment for subset of capital constrained firms (quarter of total repatriating firms)
 - Consistent with expectations of financial frictions
 - No effect on payout
-- Incentives should be aligned with all firms for future policy, not just capital contrained firms
+- Incentives should be aligned with all firms for future policy, not just capital constrained firms
 
 
 
