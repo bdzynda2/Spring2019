@@ -132,7 +132,16 @@ For discovering optimism/pessimism:
 Negative (positive) information about stocks when sentiment is optimistic (pessimistic) will conflict with investors' prior beliefs and cause cognitive dissonance. 
 
 
+## Empirical Analysis
 
+### Distinguishing Optimism
+
+To test whether momentum profits in each sentiment state are equal to 0, they regress time series of average monthly momentum profits on three dummy variables:
+    (1) OPTIMISTIC
+    (2) MILD
+    (3) PESSIMISTIC
+
+To test if mean profits in optimistic sentiment periods are different from profits in pessimistic sentiment periods, they regress average monthly momentum profits on MILD and OPTIMISTIC sentiment variables, with a constant.
 
 
 ## Empirical Analysis
@@ -456,7 +465,7 @@ They claim cognitive dissonance toward negative news during optimistic period is
 - Authors calculate average daily OIB for large and small investors following strong negative earnings surprises
 - Selling pressure during event period for small investors is stronger when sentiment is pessimistic (not statistically significant)
 - Small investors exert delayed selling pressure in adjustment period, suggesting cognitive dissonance
-- Large investors sell losers with bad news four times more heave when sentiment is optimistic
+- Large investors sell losers with bad news four times more heavy when sentiment is optimistic
 
 
 
@@ -483,5 +492,12 @@ They claim cognitive dissonance toward negative news during optimistic period is
 
 ## Conclusions
 
+- Momentum appears to be influenced by sentiment
+- Bad news diffuses slowly during periods of optimism 
+    - Momentum profits are only significant when investors are optimistic
+- Large investors are more prompt sellers of losers in optimistic periods
+
 - Table 4 $R^2$ appears small
+- Is this attributable to all stocks, or ones that just make the news?
+    - Only big, household name firms?
 
