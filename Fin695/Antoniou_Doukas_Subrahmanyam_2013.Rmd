@@ -122,6 +122,17 @@ For discovering optimism/pessimism:
 
 
 
+## Empirical Analysis
+
+### Distinguishing Optimism
+
+To test whether momentum profits in each sentiment state are equal to 0, they regress time series of average monthly momentum profits on three dummy variables:
+    
+  (1) OPTIMISTIC
+  (2) MILD
+  (3) PESSIMISTIC
+
+To test if mean profits in optimistic sentiment periods are different from profits in pessimistic sentiment periods, they regress average monthly momentum profits on MILD and OPTIMISTIC sentiment variables, with a constant.
 
 
 
@@ -132,16 +143,6 @@ For discovering optimism/pessimism:
 Negative (positive) information about stocks when sentiment is optimistic (pessimistic) will conflict with investors' prior beliefs and cause cognitive dissonance. 
 
 
-## Empirical Analysis
-
-### Distinguishing Optimism
-
-To test whether momentum profits in each sentiment state are equal to 0, they regress time series of average monthly momentum profits on three dummy variables:
-    (1) OPTIMISTIC
-    (2) MILD
-    (3) PESSIMISTIC
-
-To test if mean profits in optimistic sentiment periods are different from profits in pessimistic sentiment periods, they regress average monthly momentum profits on MILD and OPTIMISTIC sentiment variables, with a constant.
 
 
 ## Empirical Analysis
