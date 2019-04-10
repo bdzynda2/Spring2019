@@ -1,7 +1,6 @@
 ---
-title: 'Fair Value Acct. for Financial Instruments: Does It Improve the Association
-  between Bank Leverage and Credit Risk?'
-author: "Blankespoor, Linsmeier, Petroni, Shakespeare"
+title: 'Session 27 - Credit Risk and Fair Value'
+author: "Blankespoor et al. (2013) and Cantrell et al. (2013)"
 date: "April 10, 2019"
 output: pdf_document
 ---
@@ -10,9 +9,9 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Overview of Concepts and Critiques
 
-
-## Executive Summary
+## Summary - Blankespoor, Linsmeier, Petroni, and Shakespeare (2013)
 
 
 - Traditional Measures of Bank credit risk under GAAP employ historical costs and a mixed-attribute model
@@ -23,89 +22,54 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 
-## Beginning Concepts
+## Difference of Fair Values and Net Historical Costs - CMY
 
-__Question__: _What is distinction between fair value and market value?_
+(1) Fair values consider all expected credit losses, whereas loan loss reserves tend to foucs only on incurred credit losses
+    - Expected Cash flow for two measures differ
+(2) Loan fair values change and can shift away from historical costs when discount rate or market risk premium tied to credit quality of banks changes
+(3) Loan fair values can change when market-wide interest rates unrelted to credit quality change (such as changes in term structure)
 
-Fair Value : Price that is fair between both the parties. Mutually beneficial value.
+## Cons of Fair Value according to BLPS
 
-Market Value : Demand and Supply driven price. 
+Arguments against fair value:
 
-
-
-__Some Lessons from Finance literature[^1]:__
-
-_Why book leverage?_
-
-- Managers focus on book leverage because debt is better supported by assets in place than it is by growth opportunities (Myers, 1977).
-- Financial markets fluctuate and managers are said to believe that market leverage is an unreliable guide to corporate financial policy.
-- Managers do not rebalance capital structure in response to equity movements because of adjustment costs (Graham and Harvey, 2001).
-
-_Why market leverage?_
-
-- Book value of equity is primarily a "plug number" used to balance the left-hand side and the right-hand side of the balance sheet, rather than a managerially relevant number (Welch, 2004).
-- Book value of equity can even be negative (although assets cannot be).
-- Book leverage is backward looking since it measures what has taken place; market leverage is more forward looking.
-- Further, debt can be defined as long-term or total debt, and it can be defined to include accounts payable or all liabilities.
+(1) Fair Value accounting for assets that are instrument held for collection does not faithfully represent a bank's financial condition. 
+(2) Fair value accounting for liabilites that are instruments held for payment is not appropriate because
+    (i) Few opportunities for firms to settle liabilities before maturity at other than the pricnipal amount (illiquidity)
+    (ii) Counterintuitive that under fair value accounting for fixed-rate debt, an increase in credit risk results in a write-down of the value of the debt and a gain in net income
+(3) Financing of a bank's operations links loans issued with the deposits received, and one can best capture economics of the banking model if loans and deposits are similarly measured.
+(4) When fair values must be estimated, the valuation process can be significantly complex, and the resulting numbers sufficiently unreliable to cause benefits not to outweigh the costs
+(5) Fair value accounting contributes to procyclicality of financial system, which is a cause of the Great Recession - therefore it is harmful
 
 
+## BLPS motivation
+
+- Fair value research appears good in equity markets, but no one has looked at credit risk, and the two asset classes are sufficiently different such that it requires careful evaluation. 
 
 
-## Basic Bond Concepts
+## CMY Pros
 
+- Fair values are based in theory upon market prices or other market inputs, and market participans will pay more for cash flows with a lower credit risk. 
 
+## CMY Cons
 
-Some of the terminology used in connection with bonds is:
-
-- The issuer is the entity (company or government) who borrows the money by issuing the bond, and is due to pay interest and repay capital in due course.
-- The principal of a bond - also known as maturity value, face value, par value - is the amount that the issuer borrows which must be repaid to the lender.[2]
-- The coupon (of a bond) is the annual interest that the issuer must pay, expressed as a percentage of the principal.
-- The yield is the rate of return the bond generates - not the same as coupon.
-- The maturity is the end of the bond, the date that the issuer must return the principal.
-- The issue is another term for the bond itself.
-- The indenture, in some cases, is the contract that states all of the terms of the bond.
-- Bond Yield Spread is the yield of the bond at issue less the treasury rate for similar maturities
-
-
-Just as options are traded on volatility, bonds are traded on interest rates. 
-
-- As the the bond price increases (decreases) the interest rate on the bond decreases (increases)
-- Pull to Par is the effect in which the price of a bond converges to par value as time passes. At maturity the price of a debt instrument in good standing should equal its par (or face value).
-    - Another name for this effect is reduction of maturity.
-    - It results from the difference between market interest rate and the nominal yield on the bond.
-    - The Pull to Par effect is one of two factors that influence the market value of the bond and its volatility (the second one is the level of market interest rates). 
+(1) Active markets for most bank loans do no exist
+    - Subjective and not reliable
+(2) loan fair values are not a relevant measure attribute because the vast majority of loans are held for collection and are not sold, even if borrowers experience financial difficulty
+(3) Fair values are disclosed only in notes and not financial statements
 
 
 
-__Key Point:__ Investors hope to sell at a lower (higher) interest rate (price) to make a profit. Buy and hold bond investors, who say use coupons as regular income, should be indifferent all else being equal, since pull to par will guarantee return of the face value of their debt at the appropriate average interest rate. 
+__Question:__ Give the apparent trouble of calculating fair value, how do they do it for their research?
+   
+   
+# BLPS Empirical Design
 
-When you invest in a bond and hold it to maturity, you will get interest payments, usually twice a year, and receive the face value of the bond at maturity. If the bond you choose is selling at a premium because its coupon is higher than the prevailing interest rates, keep in mind that the amount you receive at maturity will be less than the amount you pay for the bond.
-
-When you buy and hold, you need not be too concerned about the impact of interest rates on a bond's price or market value. If interest rates rise, and the market value of your bond falls, you will not feel any effect unless you change your strategy and try to sell the bond. Holding on to the bond means you will not be able to invest that principal at the higher market rates, however.
-
-
-
-__Claim:__ This appears to be the reason why some institutions like the ABA would object to using fair value
-
-
-__Question__: _Why should we care about the bonds/leverage/credit risk? Why does it take center stage in this paper?_
-
-- Fixed Income markets globally exceed \$100 trillion, where equity stands at around \$65 trillion.
-
-- Authors give three reasons too:
-    (1) Analysis of equity markets will not carry over to credit markets
-          - Equity rises on earnings, but not necessarily bonds 
-          - Volatility hurts bonds, but could help equity 
-    (2) Allows for better analysis of bank failure - probably a topic of great interest when this paper was started
-    (3) Bond yield spreads may be more informative 
-    
-    
-    
-## Empirical Musings
 
 __Defintion:__ Measure leverage with the _Tangible Common Equity_ or TCE approach to leverage which is defined as (assets - intangible assets + mortgage servicing rights) / (assets - intangible assets + mortgage servicing rights - liabilities - preferred stock)
 
-__Credit Risk__ will be measured by bond yield spreads and ban failure
+__Leverage:__ Use three different measures: Fair Value, GAAP, and _TIER1_ (inverse of Tier 1 leverage ratio)
+
     
     
 <br>
@@ -113,25 +77,15 @@ __Credit Risk__ will be measured by bond yield spreads and ban failure
 Notice the three measures of leverage they test - examines well the gradual decrease in using fair value
 
 ![](blps13_1.PNG)/
-    
-    
-    
-   
-## Table 2
+
+
+__Credit Risk:__ is measured by Bond Yield Spreads (yield at the time the bond is issued or traded less Treasure rate for bond of similar maturity) and bank failure 
 
 ![](blps13_2.PNG)/
-![](blps13_3.PNG)/
-![](blps13_4.PNG)/
 
-__Note:__ They claim to use a multivariate regression, but this does not appear to be the case. What they do use is a multivariable equation in panel (c) whereas they only have one variable (what they call univariate) in panel (a). 
+__Basic Regression:__ regress yield spread on three leverage measures as of most recent fiscal end, plus variables above. 
 
-
-
-
-
-## Table 4
-
-### Some new variables:
+In subsequent regressions, they also consider the following dependent variables to gain further insight into the relation between fair values and bond yields. These categories "drive the dominance of FV":
 
 (1) FVLoans - leverage based on GAAP amounts except for loans, which are measure at fair value
 (2) FVSec - same as above, except using securities
@@ -139,12 +93,81 @@ __Note:__ They claim to use a multivariate regression, but this does not appear 
 (4) FVDep - deposits
 (5) FVOL - other liabilities
 
+__Bank Failure:__ 
 
-![](blps13_5.PNG)/
+In addition to making plots, they use univariate (with different leverage measures) and multivariate logit regressions [^1] (with _NonAccrLoans, PastDueLoans, OREO, AbsMaturityGap, ROA, LnAssets_). They look at 1, 2, and 3 years prior to failure.
+
+
+## FYI
+
+![](asdf.PNG)/ 
+
+
+# CMY Empirical Design
+
+
+## Independent Variables
+
+(1) Net Historical costs of loans (_LOANHC_)
+(2) Fair Value of Loans (_LOANFV_)
+(3) Difference between reported loan fair values and net historical costs (_FVDIFF_)
+
+## Proxies for Credit Loss
+
+(1) Net Chargeoffs (_CO_) represents amount of loans written off as uncollectible in a year, net of any recoveries. Represents recognition in the bank's financial statements that loan payments will not be collected
+(2) Non-performing Loans (_NPL_) - loans that have been modified in a troubled debt restructuring, past due, or for which interest revenue is not currently being recorded. 
+ 
+![](bmy1.PNG)/  
+![](bmy2.PNG)/
+
+
+
+
+
+__Prediction Tests: Logistic Regression__
+
+![](bmy3.PNG)/
+
+
+__Out of Sample:__ Use actual out of sample prediction to evaluate ability of fair value vs historical value (NICE!)
+
+
+
+# BLPS Table 2
+
+
+![](blps13_3.PNG)/
+![](blps13_4.PNG)/
+
+
+
+# CMY Table 3 and 4
+
+![](bmy_tab3.PNG)/
+![](bmy_tab4.PNG)/
+
+****************************************************
+
+
+
+
 
     
     
-    
+# BLPS Table 7
 
-[^1]: From Kathy Kahle's Finance 601 class notes - describing Frank and Goyal's analysis (2009)
+![](blps13_7.PNG)/
+
+[^1]: By multivariate I believe they mean multivariable in terms of independent variables
+
+
+
+
+
+
+# CMY Table 6
+
+![](bmy_tab61.PNG)/
+![](bmy_tab62.PNG)/
+
 
